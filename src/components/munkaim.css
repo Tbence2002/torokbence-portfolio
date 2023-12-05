@@ -1,0 +1,104 @@
+.munkaim-content {
+    display: flex;
+    justify-content: center;
+    gap:8rem;
+    margin-bottom: 10rem;
+}
+.rolam-works {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:3rem;
+}
+.works-box {
+    background: var(--lightgrey);
+    width: 900px;
+    border-radius: 1rem;
+    color: #fff;
+}
+.works-content {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+.mozi {
+    height: 280px;
+    width: 360px;
+    margin-left: -3rem;
+    border-radius: 1rem;
+    background:url('../assets/Fooldal.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.vt {
+    height: 280px;
+    width: 360px;
+    margin-left: -3rem;
+    border-radius: 1rem;
+    background:url('../assets/Fooldal.jpg');
+    background-size: cover;
+    background-position: center;
+} 
+.cipo {
+    height: 280px;
+    width: 360px;
+    margin-left: -3rem;
+    border-radius: 1rem;
+    background:url('../assets/cipowebshop.jpg');
+    background-size: cover;
+    background-position: center;
+
+}    
+.works-text {
+    padding: 0rem 4rem;
+}
+.works-text p:nth-child(1) {
+    color:var(--lightblue);
+    margin: 0;
+}
+.works-text h3 {
+    margin: 0.2rem 0rem 1.5rem 0rem;
+}
+.works-text p {
+    margin: 0.5rem 0rem;
+}
+.technologia {
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+}
+.cipo-text {
+    font-style: italic;
+}
+.demo {
+    display: flex;
+    gap:1rem;
+    margin-top: 0.5rem;
+}
+.demo button {
+    border: none;
+    background: var(--darkblue);
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    border-radius: 6px;
+}
+.demo button:hover {
+    animation: shake 0.5s forwards;
+    cursor: pointer;
+}
+@keyframes shake {
+    0% {
+        transform: none;
+    }
+    25% {
+        transform:translateX(-2px);
+    }
+    50% {
+        transform:translateX(2px);
+    }
+    75% {
+        transform:translateX(-2px);
+    }
+    100% {
+        transform:translateX(2px);
+    }
+}

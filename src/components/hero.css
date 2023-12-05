@@ -1,0 +1,49 @@
+.hero-container {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero-bg-image {
+    background: url('../assets/bg-full.jpg');
+    height: 1080px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+.hero-bg-layer-1 {
+    background: url('../assets/bg-left-right-layer.png');
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: -330px;
+    z-index: 3;
+}
+.hero-bg-layer-2 {
+    background: url('../assets/bg-center-layer.png');
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: -600px;
+    z-index: 2;
+}
+.hero-bg-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 60vh;
+}
+.hero-bg-text h1 {
+    margin: 0;
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+.hero-bg-text p {
+    font-size:3rem;
+    margin: 0;
+}
