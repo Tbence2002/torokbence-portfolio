@@ -21,31 +21,28 @@
     padding: 2rem 0rem;
 }
 .mozi {
-    height: 280px;
+    height: 260px;
     width: 360px;
     margin-left: -3rem;
     border-radius: 1rem;
-    background:url('../assets/Fooldal.jpg');
-    background-size: cover;
-    background-position: center;
+    background:url('../assets/mozi.jpg');
+    background-repeat: no-repeat;
 }
 .vt {
-    height: 280px;
+    height: 260px;
     width: 360px;
     margin-left: -3rem;
     border-radius: 1rem;
     background:url('../assets/Fooldal.jpg');
-    background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
 } 
 .cipo {
-    height: 280px;
+    height: 260px;
     width: 360px;
     margin-left: -3rem;
     border-radius: 1rem;
     background:url('../assets/cipowebshop.jpg');
-    background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
 
 }    
 .works-text {
@@ -80,25 +77,11 @@
     padding: 0.5rem 1.5rem;
     color: #fff;
     border-radius: 6px;
+    transition: .3s;
 }
 .demo button:hover {
-    animation: shake 0.5s forwards;
     cursor: pointer;
-}
-@keyframes shake {
-    0% {
-        transform: none;
-    }
-    25% {
-        transform:translateX(-2px);
-    }
-    50% {
-        transform:translateX(2px);
-    }
-    75% {
-        transform:translateX(-2px);
-    }
-    100% {
-        transform:translateX(2px);
-    }
+    background: #fff;
+    color: #000;
+    transition: .3s;
 }
