@@ -1,0 +1,16 @@
+.footer-image {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: -100px;
+}
+.footer-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.footer-text h3 {
+    margin: 0;
+    padding: 0;
+}
