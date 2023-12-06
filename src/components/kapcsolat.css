@@ -3,6 +3,7 @@
     justify-content: center;
     gap:5rem;
     margin-bottom: 10rem;
+    height: 500px;
 }
 .kapcsolat-text p:nth-child(1) {
     color:var(--lightblue);
@@ -20,7 +21,9 @@
 .kapcsolat-left {
     background: var(--darkblue);
     padding: 1rem;
-    height: 400px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    width: 300px;
 }
 .kapcsolat-elerhetoseg {
     display: flex;
@@ -39,13 +42,23 @@
 .email {
     margin-bottom: 1.5rem;
 }
+.email-anim {
+    width: 100%px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
 .kapcsolat-right {
     background: var(--lightgrey);
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
+    justify-content: center;
+    width: 500px;
     padding-top:3rem;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 .kapcsolat-right div:nth-child(1) {
     margin-bottom:3rem;
@@ -56,26 +69,65 @@
 .kapcsolat-message {
     position: relative;
 }
+.kapcsolat-message label {
+    position: absolute;
+    top: 1px;
+    left: 0px;
+    transition: .3s;
+    pointer-events: none;
+}
 .kapcsolat-message input {
-    height: 2rem;
-    width: 200px;
+    height: 32px;
+    width: 300px;
     background: none;
     border: 0;
-    border-bottom: 2px solid #fff;
+    border-bottom: 1px solid #fff;
+    color:#fff;
+    font-size: 1rem;
 }
 .kapcsolat-message input:focus {
     outline: none;
 }
-.kapcsolat-message label {
-    position: absolute;
-    top: 3px;
-    left: 0px;
+.kapcsolat-message input:focus ~ label, .kapcsolat-message input:valid ~ label {
+    top: -23px;
+    transition: .3s;
+    font-size: 0.9rem;
 }
 .kapcsolat-message textarea {
     resize: none;
-    height: 150px;
+    height: 32px;
     width: 300px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    line-height: 1.2rem;
+    color:#fff;
+    font-size: 1rem;
+    transition: .5s;
 }
-.kapcsolat-message textarea:focus {
+.kapcsolat-message textarea:focus ~ label, .kapcsolat-message textarea:valid ~ label {
+    top: -23px;
+    transition: .3s;
+    font-size: 0.9rem;
+}
+.kapcsolat-message textarea:focus, .kapcsolat-message textarea:valid {
     outline: none;
+    height: 120px;
+    transition: .5s;
+}
+.kapcsolat-button button {
+    border: none;
+    background: var(--darkblue);
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    border-radius: 6px;
+    margin-top: 1rem;
+    transition: .3s;
+    font-size: 1rem;
+}
+.kapcsolat-button button:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+    transition: .3s;
 }
