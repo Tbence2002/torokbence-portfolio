@@ -1,9 +1,10 @@
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Kapcsolat from './components/Kapcsolat';
-import Munkaim from './components/Munkaim';
 import Rolam from './components/Rolam';
+import Munkaim from './components/Munkaim';
+import Kapcsolat from './components/Kapcsolat';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Rolam/>
       <Munkaim/>
       <Kapcsolat/>
+      <Footer/>
     </div>
   );
 }
