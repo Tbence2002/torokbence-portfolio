@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     gap:5rem;
+    height: 100%;
     margin-bottom: 10rem;
-    height: 500px;
 }
 .kapcsolat-text p:nth-child(1) {
     color:var(--lightblue);
@@ -17,6 +17,8 @@
 }
 .kapcsolat-box {
     display: flex;
+    width: 90%;
+    margin: 0 auto;
 }
 .kapcsolat-left {
     background: var(--darkblue);
@@ -102,7 +104,7 @@
     border-bottom: 1px solid #fff;
     line-height: 1.2rem;
     color:#fff;
-    font-size: 1rem;
+    font-size: 0.9rem;
     transition: .5s;
 }
 .kapcsolat-message textarea:focus ~ label, .kapcsolat-message textarea:valid ~ label {
@@ -130,4 +132,47 @@
     background: #fff;
     color: #000;
     transition: .3s;
+}
+@media(max-width:1181px) {
+    .kapcsolat-content {
+        flex-direction: column;
+        align-items: center;
+        gap:2rem;
+    }
+}
+@media(max-width:991px) {
+    .kapcsolat-right {
+        width: 380px;
+    }
+}
+@media(max-width:747px) {
+    .kapcsolat-box {
+        flex-direction: column;
+    }
+    .kapcsolat-left {
+        width: 100%;
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 0px;
+    }
+    .email-anim-container {
+        display: flex;
+        justify-content: center;
+    }
+    .kapcsolat-right {
+        padding: 5rem;
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 0px;
+        width: 100%;
+    }
+    .kapcsolat-right input, .kapcsolat-right textarea {
+        width: 250px;
+    }
+    .email-anim {
+        width: 200px;
+    }
+}
+@media(max-width:450px) {
+    .kapcsolat-right {
+        padding: 3rem;
+    }
 }
