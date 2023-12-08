@@ -5,20 +5,20 @@ import {gsap} from 'gsap'
 function Hero() {
     useEffect(() => {
         gsap.set('.hero-bg-layer-1', { y: '0px' }); 
-        gsap.set('.hero-bg-layer-2', { y: '0px' });
+        gsap.set('.hero-bg-layer-2', { y: '-300px' });
         gsap.set('.hero-bg-title', {y:'-600px'});
         gsap.set('.hero-bg-small-title', {y:'800px'});
         gsap.set('.hero-bg-image', {y:'0'});
 
         gsap.to('.hero-bg-layer-1', {
-          duration: 2,
-          y: '-330px', 
+          duration: 3,
+          y: '-600px', 
           ease: 'power2.inOut',
         });
     
         gsap.to('.hero-bg-layer-2', {
-          duration: 3,
-          y: '-550px', 
+          duration: 3.6,
+          y: '-990px', 
           ease: 'power2.inOut',
         });
 
@@ -26,14 +26,14 @@ function Hero() {
             duration:4,
             y:'0px',
             ease:'power2.inOut',
-            delay:0.5,
+            delay:0.6,
         })
 
         gsap.to('.hero-bg-small-title', {
             duration:4,
             y:'0px',
             ease:'power2.inOut',
-            delay:0.5,
+            delay:0.6,
         })
 
         gsap.to('.hero-bg-image', {
