@@ -5,6 +5,9 @@
     --darkblue: #5F7ADB;
     --darkgrey: #26292B;
 }
+html {
+    scroll-behavior: smooth;
+}
 * {
     box-sizing: border-box;
 }
@@ -14,4 +17,5 @@ body {
     background: var(--darkgrey);
     color:#fff;
     font-family:'Poppins', sans-serif;
+    overflow-x: hidden;
 }
