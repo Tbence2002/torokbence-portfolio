@@ -1,19 +1,21 @@
 import React from 'react'
 import "./munkaim.css"
+import ScrollAnimation from './ScrollAnimation'
 
 function Munkaim() {
     return (
-        <div className="munkaim-container">
+        <div className="munkaim-container" id='munkaim'>
             <div className="munkaim-content">
                 <div className="rolam-text">
                     <p>Projektek</p>
                     <h2>Munkáim</h2>
                 </div>
                 <div className="rolam-works">
+                    <ScrollAnimation>
                     <div className="works-box">
                         <div className="works-content">
                             <div className="works-image">
-                                <div className="mozi">
+                                <div className="mozi work">
                                 </div>
                             </div>
                             <div className="works-text">
@@ -31,10 +33,12 @@ function Munkaim() {
                             </div>
                         </div>
                     </div>
+                    </ScrollAnimation>
+                    <ScrollAnimation>
                     <div className="works-box">
                         <div className="works-content">
                             <div className="works-image">
-                                <div className="vt">
+                                <div className="vt work">
                                 </div>
                             </div>
                             <div className="works-text">
@@ -53,10 +57,12 @@ function Munkaim() {
                             </div>
                         </div>
                     </div>
+                    </ScrollAnimation>
+                    <ScrollAnimation>
                     <div className="works-box">
                         <div className="works-content">
                             <div className="works-image">
-                                <div className="cipo">
+                                <div className="cipo work">
                                 </div>
                             </div>
                             <div className="works-text">
@@ -75,6 +81,7 @@ function Munkaim() {
                             </div>
                         </div>
                     </div>
+                    </ScrollAnimation>
                 </div>
             </div>
         </div>
