@@ -2,7 +2,9 @@
     display: flex;
     justify-content: center;
     gap:8rem;
-    margin-bottom: 10rem;
+    width: 90%;
+    margin: 0rem auto 10rem auto;
+    padding: 2rem 0rem;
 }
 .rolam-works {
     display: grid;
@@ -60,8 +62,12 @@
 }
 .technologia {
     display: flex;
-    align-items: center;
-    gap:0.5rem;
+    justify-content: center;
+    flex-direction: column;
+    margin-top:1rem;
+}
+.technologia p {
+    margin:0rem;
 }
 .cipo-text {
     font-style: italic;
@@ -69,7 +75,7 @@
 .demo {
     display: flex;
     gap:1rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 .demo button {
     border: none;
@@ -78,10 +84,64 @@
     color: #fff;
     border-radius: 6px;
     transition: .3s;
+    margin-top:0.5rem;
 }
 .demo button:hover {
     cursor: pointer;
     background: #fff;
     color: #000;
     transition: .3s;
+}
+/* Munkáim section. */
+@media(max-width:1413px) {
+    .munkaim-content {
+        flex-direction: column;
+        align-items: center;
+        gap:2rem;
+    }
+    .munkaim-content .rolam-text {
+        margin-bottom: 2rem;
+    }
+}
+@media(max-width:1181px) {
+    .munkaim-content {
+        margin: 0rem auto 7rem auto;
+    }
+}
+@media(max-width:1063px) {
+    .works-content {
+        flex-direction: column;
+        margin:2rem 0rem;
+        gap:2rem;
+    }
+    .works-box {
+        width: 100%;
+        position: relative;
+    }
+    .work {
+        margin-left: 0;
+        margin-top:-5rem;
+        width: 300px;
+        height: 200px;
+        background-size: cover;
+    }
+    .works-text {
+        max-width: 800px;
+    }
+}
+@media(max-width:447px) {
+    .work {
+        width: 100%;
+        height: 220px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .works-text {
+        margin-top: 6rem;
+        padding: 0rem 1.5rem;
+    }
+    .works-content {
+        margin: 3rem 0rem;
+    }
 }
