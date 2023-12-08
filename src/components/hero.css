@@ -20,7 +20,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    bottom: -330px;
+    bottom: -600px;
     z-index: 3;
 }
 .hero-bg-layer-2 {
@@ -28,7 +28,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    bottom: -600px;
+    bottom: -1000px;
     z-index: 2;
 }
 .hero-bg-text {
