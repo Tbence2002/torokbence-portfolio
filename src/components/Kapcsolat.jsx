@@ -1,20 +1,19 @@
 import React, { useRef, useState } from 'react'
 import "./kapcsolat.css"
 import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
-import Lottie, { LottieComponentProps } from 'lottie-react';
+import Lottie from 'lottie-react';
 import animationData from '../assets/kapcsolat.json'
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
 import ScrollAnimation from './ScrollAnimation';
 
 function Kapcsolat() {
-    const emailRef = useRef <LottieComponentProps>(null);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
     const confirmEmail = () => {
-        if (name === "" && email === "" && message === "") {
+        if (name === "" || email === "" || message === "") {
             toast.error("Üres mezők!")
         } else {
             toast.success("Sikeres email küldés! Hamarosan válaszolok!")
@@ -64,22 +63,22 @@ function Kapcsolat() {
                         </div>
                         <div className="email-anim-container">
                             <div className="email-anim">
-                                <Lottie lottieRef={emailRef} Loop={false} onComplete={() => { emailRef.current?.goToAndPlay(45, true) }} animationData={animationData} />
+                                <Lottie animationData={animationData} />
                             </div>
                         </div>
                     </div>
                     <div className="kapcsolat-right">
                         <form ref={form} onSubmit={sendEmail}>
                             <div className="kapcsolat-message">
-                                <input type="text" name="teljes_nev" required />
+                                <input type="text" name="teljes_nev" onChange={(e)=> setName(e.target.value)} required />
                                 <label for="teljes_nev">Teljes neve</label>
                             </div>
                             <div className="kapcsolat-message">
-                                <input type="text" name="email" required />
+                                <input type="text" name="email" onChange={(e)=> setEmail(e.target.value)} required />
                                 <label for="email">Email címe</label>
                             </div>
                             <div className="kapcsolat-message">
-                                <textarea name="uzenet" required></textarea>
+                                <textarea name="uzenet" onChange={(e)=> setMessage(e.target.value)} required></textarea>
                                 <label for="uzenet">Üzenet</label>
                             </div>
                             <div className="kapcsolat-button">
