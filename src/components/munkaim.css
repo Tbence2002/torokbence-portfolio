@@ -121,8 +121,8 @@
     .work {
         margin-left: 0;
         margin-top:-5rem;
-        width: 300px;
-        height: 200px;
+        height: 230px;
+        width: 360px;
         background-size: cover;
     }
     .works-text {
@@ -131,17 +131,18 @@
 }
 @media(max-width:447px) {
     .work {
-        width: 100%;
-        height: 220px;
+        width: 90%;
+        height: 180px;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 18px;
+        right: 18px;
+        margin-top: 0;
     }
     .works-text {
-        margin-top: 6rem;
+        margin-top: 11rem;
         padding: 0rem 1.5rem;
     }
     .works-content {
-        margin: 3rem 0rem;
+        margin:0rem;
     }
 }
