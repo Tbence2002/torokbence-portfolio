@@ -6,6 +6,7 @@
     background-position: center;
     position: relative;
     overflow: hidden;
+    min-height: 900px;
 }
 .hero-bg-image {
     background: url('../assets/bg-full.jpg');
@@ -16,19 +17,21 @@
     position: absolute;
 }
 .hero-bg-layer-1 {
-    background: url('../assets/bg-left-right-layer.png');
+    background: url('../assets/bg-left-right-layer.png') no-repeat center center;
+    background-size: cover;
     height: 100%;
     width: 100%;
     position: absolute;
-    bottom: -600px;
+    bottom: -750px; 
     z-index: 3;
 }
 .hero-bg-layer-2 {
-    background: url('../assets/bg-center-layer.png');
+    background: url('../assets/bg-center-layer.png') no-repeat center center;
+    background-size: cover;
     height: 100%;
     width: 100%;
     position: absolute;
-    bottom: -1000px;
+    bottom: -1150px; 
     z-index: 2;
 }
 .hero-bg-text {
@@ -37,13 +40,20 @@
     justify-content: center;
     flex-direction: column;
     height: 60vh;
+    min-height: 550px;
 }
 .hero-bg-text h1 {
     margin: 0;
-    font-size: 6rem;
+    font-size: calc(3rem + (53 - 16) * ((100vw - 320px) / (1600 - 320)));
     text-transform: uppercase;
 }
+
 .hero-bg-text p {
-    font-size:3rem;
+    font-size: calc(1.5rem + (31 - 12) * ((100vw - 320px) / (1600 - 320)));
     margin: 0;
+}
+@media(max-width:612px) {
+    .hero-container {
+        min-height: 600px;
+    }
 }
