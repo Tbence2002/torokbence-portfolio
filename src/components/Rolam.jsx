@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import rolam from '../assets/rolamkep.png'
 import "./rolam.css"
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
@@ -113,7 +113,7 @@ function Rolam() {
         </div>
       </div>
       </ScrollAnimation>
-      <div className="tanulmanyok-content" >
+      <div className="tanulmanyok-content">
         <div className="rolam-text" >
           <p>Végzettség, munkahely</p>
           <h2>Életpályám</h2>
