@@ -129,6 +129,11 @@
         max-width: 800px;
     }
 }
+@media(max-width:1015px) {
+    .munkaim-content {
+        margin-bottom: 2rem;
+    }
+}
 @media(max-width:447px) {
     .work {
         width: 90%;
@@ -144,5 +149,8 @@
     }
     .works-content {
         margin:0rem;
+    }
+    .munkaim-content .rolam-text {
+        margin: 0;
     }
 }
