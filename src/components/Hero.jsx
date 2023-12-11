@@ -9,7 +9,34 @@ function Hero() {
         gsap.set('.hero-bg-title', {y:'-600px'});
         gsap.set('.hero-bg-small-title', {y:'800px'});
         gsap.set('.hero-bg-image', {y:'0'});
+        const isMobile = window.innerWidth <= 612;
+        if(isMobile) {
+          gsap.to('.hero-bg-layer-1', {
+            duration: 3,
+            y: '-600px', 
+            ease: 'power2.inOut',
+            delay:'-1'
+          });
+          gsap.to('.hero-bg-layer-2', {
+            duration: 3.6,
+            y: '-990px', 
+            ease: 'power2.inOut',
+            delay:'-1',
+          });
+          gsap.to('.hero-bg-title', {
+            duration:4,
+            y:'0px',
+            ease:'power2.inOut',
+            delay:-0.6,
+        })
 
+        gsap.to('.hero-bg-small-title', {
+            duration:4,
+            y:'0px',
+            ease:'power2.inOut',
+            delay:-0.6,
+        })
+        } else {
         gsap.to('.hero-bg-layer-1', {
           duration: 3,
           y: '-600px', 
@@ -21,20 +48,20 @@ function Hero() {
           y: '-990px', 
           ease: 'power2.inOut',
         });
-
         gsap.to('.hero-bg-title', {
-            duration:4,
-            y:'0px',
-            ease:'power2.inOut',
-            delay:0.6,
-        })
+          duration:4,
+          y:'0px',
+          ease:'power2.inOut',
+          delay:0.6,
+      })
 
-        gsap.to('.hero-bg-small-title', {
-            duration:4,
-            y:'0px',
-            ease:'power2.inOut',
-            delay:0.6,
-        })
+      gsap.to('.hero-bg-small-title', {
+          duration:4,
+          y:'0px',
+          ease:'power2.inOut',
+          delay:0.6,
+      })
+      }
 
         gsap.to('.hero-bg-image', {
             duration:3,
