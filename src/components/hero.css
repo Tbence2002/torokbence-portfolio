@@ -41,13 +41,13 @@
     flex-direction: column;
     height: 60vh;
     min-height: 550px;
+    z-index: 111;
 }
 .hero-bg-text h1 {
     margin: 0;
     font-size: calc(3rem + (53 - 16) * ((100vw - 320px) / (1600 - 320)));
     text-transform: uppercase;
 }
-
 .hero-bg-text p {
     font-size: calc(1.5rem + (31 - 12) * ((100vw - 320px) / (1600 - 320)));
     margin: 0;
