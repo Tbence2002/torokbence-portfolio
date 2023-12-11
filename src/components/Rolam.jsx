@@ -104,8 +104,8 @@ function Rolam() {
             legjobb tudásomat beleadva, szenvedéllyel. - Ezt az álláspontomat mai napig fenntartom. </p>
           <p>A végcélom a szakmában, hogy eljussak a Full Stack fejlesztő szintre.</p>
           <div className="social">
-            <FaGithubSquare />
-            <FaLinkedin />
+            <FaGithubSquare className='github'/>
+            <FaLinkedin className='linkedin'/>
           </div>
         </div>
         <div className="rolam-image">
