@@ -13,7 +13,15 @@
 .social {
     display: flex;
     gap:1rem;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
+}
+.github, .linkedin {
+    transition: .2s;
+}
+.github:hover, .linkedin:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .2s;
 }
 .rolam-text p:nth-child(5) {
     font-weight: 600;
@@ -104,6 +112,14 @@
     }
     .rolam-skills-frontend, .rolam-skills-backend {
         justify-content: center;
+    }
+}
+@media(max-width:1015px) {
+    .rolam-content,.kepessegek-content {
+        margin-bottom: 3rem;
+    }
+    .tanulmanyok-content {
+        margin-bottom: 5rem;
     }
 }
 /* Skills section kisebb képernyőn. */
