@@ -92,6 +92,10 @@
     color: #000;
     transition: .3s;
 }
+.demo a {
+    text-decoration: none;
+    color:#fff;
+}
 /* Munkáim section. */
 @media(max-width:1413px) {
     .munkaim-content {
