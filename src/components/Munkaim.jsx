@@ -28,7 +28,7 @@ function Munkaim() {
                                     <p>HTML, CSS, React, NodeJS, MySQL</p>
                                 </div>
                                 <div className="demo">
-                                    <button>GitHub</button>
+                                    <a href="https://github.com/Tbence2002/Popcorn_city" target='_blank'><button>GitHub</button></a>
                                 </div>
                             </div>
                         </div>
@@ -51,8 +51,8 @@ function Munkaim() {
                                     <p>HTML, CSS, React, NodeJS, MySQL, Firebase</p>
                                 </div>
                                 <div className="demo">
-                                    <button>Demo</button>
-                                    <button>GitHub</button>
+                                <a href="https://github.com/Tbence2002/kossuth_vt" target='_blank'><button>Demo</button></a>
+                                <a href="https://github.com/Tbence2002/Popcorn_city" target='_blank'><button>GitHub</button></a>
                                 </div>
                             </div>
                         </div>
@@ -75,8 +75,8 @@ function Munkaim() {
                                     <p>HTML, CSS, React</p>
                                 </div>
                                 <div className="demo">
-                                    <button>Demo</button>
-                                    <button>GitHub</button>
+                                    <a href="https://shoes-react-app.vercel.app/" target='_blank'><button>Demo</button></a>
+                                    <a href="https://github.com/Tbence2002/shoes-react-app" target='_blank'><button>GitHub</button></a>
                                 </div>
                             </div>
                         </div>
