@@ -2,7 +2,7 @@ header {
     position: absolute;
     top: 0;
     z-index: 4;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(3px);
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px;
 }
