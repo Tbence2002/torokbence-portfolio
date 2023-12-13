@@ -2,10 +2,10 @@ import React, {useEffect, useState} from 'react'
 import "./header.css"
 import { IoMdClose } from "react-icons/io";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
+import gsap from 'gsap';
 
 function Header() {
   const [active, setActive] = useState(false);
-
   return (
     <div className='header-container'>
         <header className='header'>
