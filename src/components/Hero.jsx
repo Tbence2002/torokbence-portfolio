@@ -73,7 +73,9 @@ function Hero() {
 
   return (
     <div className='hero-container'>
-            <div className="hero-bg-image"></div>
+            <div className="hero-bg-image">
+              <div className="hero-bg-dark-layer"></div>
+            </div>
             <div className="hero-bg-layer-1"></div>
             <div className="hero-bg-layer-2"></div>
             <div className="hero-bg-text">
