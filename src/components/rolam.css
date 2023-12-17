@@ -36,6 +36,9 @@
     margin: 0.2rem 0rem;
     font-size: 1.7rem;
 }
+.rolam-image {
+    filter: drop-shadow(5px 5px 20px var(--darkblue));
+}
 .tanulmanyok-content {
     display: flex;
     justify-content: center;
