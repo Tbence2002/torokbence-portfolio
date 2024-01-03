@@ -1,8 +1,28 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./munkaim.css"
 import ScrollAnimation from './ScrollAnimation'
+import { FaRegCircle } from "react-icons/fa"
+import bdportfolio from '../assets/bdportfolio.jpg'
+import patakparlat from '../assets/patak.jpg'
+import vadasztarsasag from '../assets/Fooldal.jpg'
+import cipowebshop from '../assets/cipowebshop.jpg'
+import mozi from '../assets/mozi.jpg'
 
 function Munkaim() {
+    const [active, setActive] = useState(1);
+
+    const scrollToTop = () => {
+        const element = document.getElementById('munkaim'); 
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
+    const handleSetActive = (index) => {
+        setActive(index);
+        scrollToTop();
+    };
+
     return (
         <div className="munkaim-container" id='munkaim'>
             <div className="munkaim-content">
@@ -10,79 +30,138 @@ function Munkaim() {
                     <p>Projektek</p>
                     <h2>Munkáim</h2>
                 </div>
+                {
+                active === 1 &&
                 <div className="rolam-works">
-                    <ScrollAnimation>
-                    <div className="works-box">
-                        <div className="works-content">
-                            <div className="works-image">
-                                <div className="mozi work">
-                                </div>
+                <ScrollAnimation result="works-box">
+                    <div className="works-content">
+                        <div className="works-image">
+                            <div className="work">
+                                <img src={mozi} alt="Mozi" />
                             </div>
-                            <div className="works-text">
-                                <p>Csapatmunka</p>
-                                <h3>Mozi Projekt</h3>
-                                <p>Az oldalt egy éven keresztül készítettük csapatban, amit a 2023-as tanév végén be kellett mutatnunk angolul, illetve magyarul.</p>
-                                <p>A projekthez készült egy 40 ezer karakterből álló Felhasználói,- és Fejlesztői dokumentáció is.</p>
-                                <div className="technologia">
-                                    <p>Technológia:</p>
-                                    <p>HTML, CSS, React, NodeJS, MySQL</p>
-                                </div>
-                                <div className="demo">
-                                    <a href="https://github.com/Tbence2002/Popcorn_city" target='_blank'><button>GitHub</button></a>
-                                </div>
+                        </div>
+                        <div className="works-text">
+                            <p>Csapatmunka</p>
+                            <h3>Mozi Projekt</h3>
+                            <p>Az oldalt egy éven keresztül készítettük csapatban, amit a 2023-as tanév végén be kellett mutatnunk angolul, illetve magyarul.</p>
+                            <p>A projekthez készült egy 40 ezer karakterből álló Felhasználói,- és Fejlesztői dokumentáció is.</p>
+                            <div className="technologia">
+                                <p>Technológia:</p>
+                                <p>HTML, CSS, React, NodeJS, MySQL</p>
+                            </div>
+                            <div className="demo">
+                                <a href="https://github.com/Tbence2002/Popcorn_city" target='_blank' rel="noreferrer"><button>GitHub</button></a>
                             </div>
                         </div>
                     </div>
-                    </ScrollAnimation>
-                    <ScrollAnimation>
-                    <div className="works-box">
-                        <div className="works-content">
-                            <div className="works-image">
-                                <div className="vt work">
-                                </div>
+                </ScrollAnimation>
+                <ScrollAnimation result="works-box">
+                    <div className="works-content">
+                        <div className="works-image">
+                            <div className="work">
+                                <img src={vadasztarsasag} alt="Vadásztársaság" />
                             </div>
-                            <div className="works-text">
-                                <p>Egyéni munka</p>
-                                <h3>Vadásztársaság Projekt</h3>
-                                <p>Egy régebbi weboldal ráncfelvarrása, amely teljes mértékben reszponzív, megfelel a mai modern design elvárásoknak.</p>
-                                <p>Tartalmaz admin oldalt, ahol lehet képeket feltölteni, híreket, tagok neveit és tisztségét közzé tenni.</p>
-                                <div className="technologia">
-                                    <p>Technológia:</p>
-                                    <p>HTML, CSS, React, NodeJS, MySQL, Firebase</p>
-                                </div>
-                                <div className="demo">
-                                <a href="https://github.com/Tbence2002/kossuth_vt" target='_blank'><button>Demo</button></a>
-                                <a href="https://github.com/Tbence2002/Popcorn_city" target='_blank'><button>GitHub</button></a>
-                                </div>
+                        </div>
+                        <div className="works-text">
+                            <p>Egyéni munka</p>
+                            <h3>Vadásztársaság Projekt</h3>
+                            <p>Egy régebbi weboldal ráncfelvarrása, amely teljes mértékben reszponzív, megfelel a mai modern design elvárásoknak.</p>
+                            <p>Tartalmaz admin oldalt, ahol lehet képeket feltölteni, híreket, tagok neveit és tisztségét közzé tenni.</p>
+                            <div className="technologia">
+                                <p>Technológia:</p>
+                                <p>HTML, CSS, React, NodeJS, MySQL, Firebase</p>
+                            </div>
+                            <div className="demo">
+                            <a href="https://github.com/Tbence2002/kossuth_vt" target='_blank' rel="noreferrer"><button>Demo</button></a>
+                            <a href="https://github.com/Tbence2002/Popcorn_city" target='_blank' rel="noreferrer"><button>GitHub</button></a>
                             </div>
                         </div>
                     </div>
-                    </ScrollAnimation>
-                    <ScrollAnimation>
-                    <div className="works-box">
-                        <div className="works-content">
-                            <div className="works-image">
-                                <div className="cipo work">
-                                </div>
+                </ScrollAnimation>
+                <ScrollAnimation result="works-box">
+                    <div className="works-content">
+                        <div className="works-image">
+                            <div className="work">
+                                <img src={cipowebshop} alt="Cipő Webshop" />
                             </div>
-                            <div className="works-text">
-                                <p>Egyéni munka</p>
-                                <h3>Cipő Webshop Projekt</h3>
-                                <p>Egy korszerű, felhasználóbarát cipő webáruház Frontend terve, ahol a vásárlók kényelmesen tudnak nézelődni. </p>
-                                <p className='cipo-text'>A weboldal kizárólag látvány miatt készült, nem tartalmaz Backendet, így a rendelés, vásárlás funkciók nem működnek.</p>
-                                <div className="technologia">
-                                    <p>Technológia:</p>
-                                    <p>HTML, CSS, React</p>
-                                </div>
-                                <div className="demo">
-                                    <a href="https://shoes-react-app.vercel.app/" target='_blank'><button>Demo</button></a>
-                                    <a href="https://github.com/Tbence2002/shoes-react-app" target='_blank'><button>GitHub</button></a>
-                                </div>
+                        </div>
+                        <div className="works-text">
+                            <p>Egyéni munka</p>
+                            <h3>Cipő Webshop Projekt</h3>
+                            <p>Egy korszerű, felhasználóbarát cipő webáruház Frontend terve, ahol a vásárlók kényelmesen tudnak nézelődni. </p>
+                            <p className='cipo-text'>A weboldal kizárólag látvány miatt készült, nem tartalmaz Backendet, így a rendelés, vásárlás funkciók nem működnek.</p>
+                            <div className="technologia">
+                                <p>Technológia:</p>
+                                <p>HTML, CSS, React</p>
+                            </div>
+                            <div className="demo">
+                                <a href="https://shoes-react-app.vercel.app/" target='_blank' rel="noreferrer"><button>Demo</button></a>
+                                <a href="https://github.com/Tbence2002/shoes-react-app" target='_blank' rel="noreferrer"><button>GitHub</button></a>
                             </div>
                         </div>
                     </div>
-                    </ScrollAnimation>
-                </div>
+                </ScrollAnimation>
+                <div className="works-next">
+                    <FaRegCircle onClick={() => handleSetActive(1)} className={active === 1 && 'works-next-circle'} />
+                    <FaRegCircle onClick={() => handleSetActive(2)} className={active === 2 && 'works-next-circle'} />
+                    </div>
+            </div>
+                }
+              {
+                active === 2 &&
+                <div className="rolam-works">
+                <ScrollAnimation result="works-box">
+                    <div className="works-content">
+                        <div className="works-image">
+                            <div className="work">
+                                <img src={patakparlat} alt="Patak-Párlat" />
+                            </div>
+                        </div>
+                        <div className="works-text">
+                            <p>Csapatmunka</p>
+                            <h3>Patak-Párlat</h3>
+                            <p>Az oldal egy pálinkafőzdének készült. A projektben együttműködtem egy backend fejlesztővel a szerveroldali adatok biztonságos kezelése végett.</p>
+                            <p>A projekthez tartozik admin és felhasználói oldal, ahonnan aktuális híreket, képeket lehet feltölteni és megtekinteni.</p>
+                            <div className="technologia">
+                                <p>Technológia:</p>
+                                <p>HTML, CSS, React, Spring, Firebase, MySQL</p>
+                            </div>
+                            <div className="demo">
+                                <a href="https://patak-parlat.com/" target='_blank' rel="noreferrer"><button>Demo</button></a>
+                                <a href="https://github.com/Tbence2002/patak-parlat" target='_blank' rel="noreferrer"><button>GitHub</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </ScrollAnimation>
+                <ScrollAnimation result="works-box">
+                    <div className="works-content">
+                        <div className="works-image">
+                            <div className="work">
+                                <img src={bdportfolio} alt="Balogh Dávid Portfolió" />
+                            </div>
+                        </div>
+                        <div className="works-text">
+                            <p>Egyéni munka</p>
+                            <h3>Balogh Dávid portfolió</h3>
+                            <p>A projektben törekedtem arra, hogy egy átfogó weboldalt készítsek, amely megfelel a mai elvárásoknak, és felhasználóbarát élményt nyújt.</p>
+                            <p>Külön figyelmet fektettem a keresőoptimalizálásra, az animációkra és a megjelenésre, amely növeli a látogató benyomását. </p>
+                            <div className="technologia">
+                                <p>Technológia:</p>
+                                <p>HTML, CSS, React, GSAP</p>
+                            </div>
+                            <div className="demo">
+                            <a href="https://github.com/Florex001/portfolio-web-2.0" target='_blank' rel="noreferrer"><button>Demo</button></a>
+                            <a href="https://github.com/Tbence2002/Popcorn_city" target='_blank' rel="noreferrer"><button>GitHub</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </ScrollAnimation>
+                <div className="works-next">
+                    <FaRegCircle onClick={() => handleSetActive(1)} className={active === 1 && 'works-next-circle'} />
+                    <FaRegCircle onClick={() => handleSetActive(2)} className={active === 2 && 'works-next-circle'} />
+                    </div>
+            </div>
+                }
             </div>
         </div>
     )
