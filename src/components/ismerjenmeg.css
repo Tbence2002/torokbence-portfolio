@@ -1,0 +1,117 @@
+.ismerjen_meg_container {
+    opacity: 0;
+    transition: .3s;
+}
+.imc-box {
+    position: fixed;
+    bottom:15px;
+    right: 15px;
+    z-index: 2;
+    background: #fff;
+    padding: 1rem;
+    color:#000;
+    border-radius: 12px;
+    transition: .3s;
+    width: 270px;
+    height: 60px;
+    overflow: hidden;
+}
+.imc-box:hover {
+    filter: drop-shadow(5px 5px 15px #fff);
+    transition: .3s;
+    cursor: pointer;
+}
+.imc-title {
+    display: flex;
+    align-items: center;
+    gap:0.3rem;
+}
+.me {
+    font-size: 1.5rem;
+    color:var(--darkgrey);
+}
+.imc-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+}
+.activebox {
+    width: 350px;
+    height: 500px;
+    overflow-y:auto;
+}
+.imc-header {
+    display: flex;
+    gap:0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 0rem;
+}
+.imc-header button {
+    border: 0;
+    background: var(--lightblue);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.imc-header button:hover {
+    cursor: pointer;
+    background: var(--darkblue);
+    color: #fff;
+}
+.activemenu button{
+    background: var(--darkblue);
+    color: #fff;
+}
+.imc-body p:nth-child(1) {
+    background:rgb(228, 228, 228);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    margin:1rem 0rem;
+}
+.imc-body p:nth-child(2) {
+    background:rgb(228, 228, 228);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    margin:1rem 0rem;
+}
+.imc-body p:nth-child(3) {
+    background:rgb(228, 228, 228);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    margin:1rem 0rem;
+}
+.showimc {
+    opacity: 1;
+    transition: .7s;
+}
+@media(max-width:1012px) {
+    .imc-title h3 {
+        display: none;
+    }
+    .imc-box {
+        width: 55px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .me {
+        font-size: 2.5rem;
+        margin-top:1.6rem;
+    }
+    .activebox {
+        width: 350px;
+        height: 500px;
+        overflow-y:auto;
+    }
+}
+@media(max-width:500px) {
+    .imc-content{
+        width: 93%;
+    }
+    .activebox {
+        height: 400px;
+    }
+}
