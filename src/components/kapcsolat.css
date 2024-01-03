@@ -51,6 +51,15 @@
     align-items: center;
     background-size: cover;
 }
+.social a {
+    text-decoration: none;
+    color:#fff;
+}
+.sociala:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .2s;
+}
 .kapcsolat-right {
     background: var(--lightgrey);
     display: flex;
