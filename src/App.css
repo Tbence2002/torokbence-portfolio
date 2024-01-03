@@ -17,5 +17,4 @@ body {
     background: var(--darkgrey);
     color:#fff;
     font-family:'Poppins', sans-serif;
-    overflow-x: hidden;
 }
