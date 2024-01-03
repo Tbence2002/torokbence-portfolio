@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useInView } from 'react-intersection-observer';
 
-function ScrollAnimation({children}) {
+function ScrollAnimation({children, result}) {
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.3,
@@ -28,8 +28,8 @@ function ScrollAnimation({children}) {
         }
       }, [inView]);
   return (
-    <div className='scrollanim-container' ref={ref}>
-      <div className="scrollanim" ref={elementRef}>
+    <div ref={ref}>
+      <div className={`${result}`} ref={elementRef}>
         {children}
       </div>
     </div>
