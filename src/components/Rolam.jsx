@@ -4,7 +4,7 @@ import "./rolam.css"
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { IoSchool } from "react-icons/io5";
-import { FaGithubSquare, FaLinkedin, FaCode } from "react-icons/fa";
+import { FaGithubSquare, FaLinkedin, FaCode, FaFacebookSquare } from "react-icons/fa";
 import ScrollAnimation from './ScrollAnimation'
 import { useInView } from 'react-intersection-observer';
 import { gsap } from 'gsap';
@@ -18,7 +18,7 @@ function Rolam() {
   useEffect(() => {
     if (inView) {
       gsap.set('.html, .css, .js, .react, .angular, .figma', { y: '-50px', opacity:0});
-      gsap.set('.mysql, .mongodb, .nodejs', { y: '50px', opacity:0});
+      gsap.set('.mysql, .mongodb, .nodejs, .git', { y: '50px', opacity:0});
 
       gsap.to('.html', {
         duration: 0.8,
@@ -64,54 +64,60 @@ function Rolam() {
         ease: 'power2.inOut',
         delay: 0.5,
       });
-      gsap.to('.mysql', {
+      gsap.to('.git', {
         duration: 0.8,
         y: '0px',
         opacity:1,
         ease: 'power2.inOut',
         delay: 0,
       });
-      gsap.to('.mongodb', {
+      gsap.to('.mysql', {
         duration: 0.8,
         y: '0px',
         opacity:1,
         ease: 'power2.inOut',
         delay: 0.1,
       });
-      gsap.to('.nodejs', {
+      gsap.to('.mongodb', {
         duration: 0.8,
         y: '0px',
         opacity:1,
         ease: 'power2.inOut',
         delay: 0.2,
       });
+      gsap.to('.nodejs', {
+        duration: 0.8,
+        y: '0px',
+        opacity:1,
+        ease: 'power2.inOut',
+        delay: 0.3,
+      });
     } else {
-      gsap.set('.html, .css, .js, .react, .angular, .figma', { y: '-50px', opacity:0});
+      gsap.set('.html, .css, .js, .react, .angular, .figma, .git', { y: '-50px', opacity:0});
       gsap.set('.mysql, .mongodb, .nodejs', { y: '50px', opacity:0});
     }
   }, [inView]);
 
   return (
     <div className='rolam-container' id='rolam' >
-      <ScrollAnimation>
-      <div className="rolam-content">
+      <ScrollAnimation result="rolam-content">
         <div className="rolam-text">
           <p>Bemutatkozom</p>
           <h2>Rólam</h2>
-          <p>Török Bence vagyok, Junior Frontend fejlesztő. Érdeklődésem a weboldal fejlesztés felé kisebb koromig visszanyúlik, ezért középiskolai tanulmányaimat Informatika
+          <p>Török Bence vagyok, Junior Frontend fejlesztő React keretrendszerben. Érdeklődésem a weboldal fejlesztés felé kisebb koromig visszanyúlik, ezért középiskolai tanulmányaimat Informatika
             ágazaton végeztem el, ami megerősített abban, hogy Webfejlesztő legyek, így elvégeztem egy Szoftverfejlesztő-és tesztelő 2 éves képzést is.</p>
           <p>Számomra nagyon fontos a fejlődés, szabadidőmben nagyon sok időt fordítok az önfejlesztésre, valamint a gyakorlásra. Mindig tudtam, hogy ez az a munka, amelyet örömmel, lelkiismeretesen végzek,
             legjobb tudásomat beleadva, szenvedéllyel. - Ezt az álláspontomat mai napig fenntartom. </p>
           <p>A végcélom a szakmában, hogy eljussak a Full Stack fejlesztő szintre.</p>
           <div className="social">
-            <FaGithubSquare className='github'/>
-            <FaLinkedin className='linkedin'/>
+            <a href="https://github.com/Tbence2002" target="_blank" rel="noreferrer"><FaGithubSquare className='github'/></a>
+            <a href="https://www.linkedin.com/in/t%C3%B6r%C3%B6k-bence-50653227b/" target='_blank' rel="noreferrer"><FaLinkedin className='linkedin'/></a>
+            <a href="https://www.facebook.com/profile.php?id=100010262581469" target='_blank' rel="noreferrer"><FaFacebookSquare className='facebook' /></a>
           </div>
         </div>
         <div className="rolam-image">
           <img src={rolam} alt="Török Bence" />
         </div>
-      </div>
       </ScrollAnimation>
       <div className="tanulmanyok-content">
         <div className="rolam-text" >
@@ -204,6 +210,12 @@ function Rolam() {
               </div>
           </div>
           <div className='rolam-skills-backend'>
+          <div className="skills-box git">
+              <div className="skills-content">
+                <p>Verziókezelés</p>
+                <h3>GitHub</h3>
+              </div>
+            </div>
              <div className="skills-box mysql">
               <div className="skills-content">
                 <p>Backend</p>
