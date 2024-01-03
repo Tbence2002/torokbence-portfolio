@@ -6,7 +6,6 @@ header {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px;
 }
-
 header ul {
     display: flex;
     justify-content: center;
@@ -15,7 +14,6 @@ header ul {
     padding: 0;
     margin: 0;
 }
-
 header ul li a {
     text-decoration: none;
     color: #fff;
@@ -27,11 +25,9 @@ header ul li a {
     text-align: center;
     font-weight: 600;
 }
-
 header ul li a:hover {
     color: var(--darkblue);
 }
-
 header ul li a:before {
     content: '';
     position: absolute;
@@ -41,11 +37,9 @@ header ul li a:before {
     width: 0;
     background: var(--darkblue);
 }
-
 header ul li a:hover:before {
     width: 100%;
 }
-
 .menu-open {
     display: none;
     position: absolute;
@@ -65,7 +59,7 @@ header ul li a:hover:before {
     cursor: pointer;
 }
 .show-nav {
-    transform: translateX(0);
+    transform: translatey(0);
     transition: .7s;
 }
 @media(max-width:612px) {
@@ -85,7 +79,7 @@ header ul li a:hover:before {
         width: 50%;
         height: 100vh;
         padding: 4rem 3rem;
-        transform: translateX(100%);
+        transform: translatey(-100%);
         transition: .7s;
         animation: 1s menu forwards;
     }
