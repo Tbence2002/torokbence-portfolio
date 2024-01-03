@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import "./kapcsolat.css"
-import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
+import { FaFacebookSquare, FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import Lottie from 'lottie-react';
 import animationData from '../assets/kapcsolat.json'
 import emailjs from '@emailjs/browser';
@@ -16,7 +16,7 @@ function Kapcsolat() {
         if (name === "" || email === "" || message === "") {
             toast.error("Üres mezők!")
         } else {
-            toast.success("Sikeres email küldés! Hamarosan válaszolok!")
+            return
         }
     }
     const form = useRef();
@@ -26,9 +26,12 @@ function Kapcsolat() {
 
         emailjs.sendForm('service_5a9kffq', 'template_1lxlqsa', form.current, 'S9JxZg-_yZ4RLj0bo')
             .then((result) => {
-                console.log(result.text);
+                toast.success("Sikeres email küldés! Hamarosan válaszolok!");
+                setName("");
+                setEmail("");
+                setMessage("");
             }, (error) => {
-                console.log(error.text);
+                toast.error("Hiba történt az üzenet küldése közben!");
             });
     };
 
@@ -43,14 +46,14 @@ function Kapcsolat() {
                     <p>Kapcsolat</p>
                     <h2>írjon nekem!</h2>
                 </div>
-                <ScrollAnimation>
-                <div className="kapcsolat-box">
+                <ScrollAnimation result="kapcsolat-box">
                     <div className="kapcsolat-left">
                         <div className="kapcsolat-elerhetoseg">
                             <h3>Elérhetőségek</h3>
                             <div className="social">
-                                <FaFacebookSquare />
-                                <FaLinkedin />
+                                <a href="https://www.facebook.com/profile.php?id=100010262581469" target='_blank' rel="noreferrer"><FaFacebookSquare  className='facebook'/></a>
+                                <a href="https://www.linkedin.com/in/t%C3%B6r%C3%B6k-bence-50653227b/" target='_blank' rel="noreferrer"><FaLinkedin className='github' /></a>
+                                <a href="https://github.com/Tbence2002" target="_blank" rel="noreferrer"><FaGithubSquare className='github'/></a>
                             </div>
                         </div>
                         <div className="email">
@@ -70,23 +73,22 @@ function Kapcsolat() {
                     <div className="kapcsolat-right">
                         <form ref={form} onSubmit={sendEmail}>
                             <div className="kapcsolat-message">
-                                <input type="text" name="teljes_nev" onChange={(e)=> setName(e.target.value)} required />
+                                <input type="text" name="teljes_nev" onChange={(e)=> setName(e.target.value)} value={name} required />
                                 <label for="teljes_nev">Teljes neve</label>
                             </div>
                             <div className="kapcsolat-message">
-                                <input type="text" name="email" onChange={(e)=> setEmail(e.target.value)} required />
+                                <input type="text" name="email" onChange={(e)=> setEmail(e.target.value)} value={email} required />
                                 <label for="email">Email címe</label>
                             </div>
                             <div className="kapcsolat-message">
-                                <textarea name="uzenet" onChange={(e)=> setMessage(e.target.value)} required></textarea>
+                                <textarea name="uzenet" onChange={(e)=> setMessage(e.target.value)} value={message} required></textarea>
                                 <label for="uzenet">Üzenet</label>
                             </div>
                             <div className="kapcsolat-button">
-                                <button type='submit' onClick={confirmEmail}>Küldés</button>
+                                <button type='submit' onClick={confirmEmail} >Küldés</button>
                             </div>
                         </form>
                     </div>
-                </div>
                 </ScrollAnimation>
             </div>  
         </div>
