@@ -1,28 +1,14 @@
-import React, {useState} from 'react'
+import React from 'react'
 import "./munkaim.css"
 import ScrollAnimation from './ScrollAnimation'
-import { FaRegCircle } from "react-icons/fa"
 import bdportfolio from '../assets/bdportfolio.jpg'
 import patakparlat from '../assets/patak.jpg'
 import vadasztarsasag from '../assets/Fooldal.jpg'
 import cipowebshop from '../assets/cipowebshop.jpg'
 import mozi from '../assets/mozi.jpg'
+import Slide from './Slide'
 
-function Munkaim() {
-    const [active, setActive] = useState(1);
-
-    const scrollToTop = () => {
-        const element = document.getElementById('munkaim'); 
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    };
-
-    const handleSetActive = (index) => {
-        setActive(index);
-        scrollToTop();
-    };
-
+function Munkaim({next, setNext}) {
     return (
         <div className="munkaim-container" id='munkaim'>
             <div className="munkaim-content">
@@ -31,7 +17,7 @@ function Munkaim() {
                     <h2>Munkáim</h2>
                 </div>
                 {
-                active === 1 &&
+                next === 1 &&
                 <div className="rolam-works">
                 <ScrollAnimation result="works-box">
                     <div className="works-content">
@@ -101,14 +87,11 @@ function Munkaim() {
                         </div>
                     </div>
                 </ScrollAnimation>
-                <div className="works-next">
-                    <FaRegCircle onClick={() => handleSetActive(1)} className={active === 1 && 'works-next-circle'} />
-                    <FaRegCircle onClick={() => handleSetActive(2)} className={active === 2 && 'works-next-circle'} />
-                    </div>
+                <Slide next={next} setNext={setNext}/>
             </div>
                 }
               {
-                active === 2 &&
+                next === 2 &&
                 <div className="rolam-works">
                 <ScrollAnimation result="works-box">
                     <div className="works-content">
@@ -156,10 +139,7 @@ function Munkaim() {
                         </div>
                     </div>
                 </ScrollAnimation>
-                <div className="works-next">
-                    <FaRegCircle onClick={() => handleSetActive(1)} className={active === 1 && 'works-next-circle'} />
-                    <FaRegCircle onClick={() => handleSetActive(2)} className={active === 2 && 'works-next-circle'} />
-                    </div>
+                <Slide next={next} setNext={setNext}/>
             </div>
                 }
             </div>
