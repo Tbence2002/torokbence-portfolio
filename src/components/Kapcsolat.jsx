@@ -74,15 +74,15 @@ function Kapcsolat() {
                         <form ref={form} onSubmit={sendEmail}>
                             <div className="kapcsolat-message">
                                 <input type="text" name="teljes_nev" onChange={(e)=> setName(e.target.value)} value={name} required />
-                                <label for="teljes_nev">Teljes neve</label>
+                                <label htmlFor="teljes_nev">Teljes neve</label>
                             </div>
                             <div className="kapcsolat-message">
                                 <input type="text" name="email" onChange={(e)=> setEmail(e.target.value)} value={email} required />
-                                <label for="email">Email címe</label>
+                                <label htmlFor="email">Email címe</label>
                             </div>
                             <div className="kapcsolat-message">
                                 <textarea name="uzenet" onChange={(e)=> setMessage(e.target.value)} value={message} required></textarea>
-                                <label for="uzenet">Üzenet</label>
+                                <label htmlFor="uzenet">Üzenet</label>
                             </div>
                             <div className="kapcsolat-button">
                                 <button type='submit' onClick={confirmEmail} >Küldés</button>
