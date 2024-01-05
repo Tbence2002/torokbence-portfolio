@@ -1,6 +1,6 @@
-# Projekt célja
+# Projektről
 
-A weboldal személyes tudásom bemutatásaként készült.
+A weboldal azért készült, hogy egy helyen tudjam bemutatni elkészült munkáimat.
 
 # Technológiák
 
