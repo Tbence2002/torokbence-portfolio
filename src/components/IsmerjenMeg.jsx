@@ -85,7 +85,7 @@ function IsmerjenMeg() {
                         {active === 4 &&
                             <div className="imc-wfejlesztes">
                                <p>Mindig is lenyűgöztek a kreatív weboldalak, sokszor foglalkoztatott a kérdés, hogy hogyan készült?</p>
-                               <p>Középiskolai tanulmányok mellett elkezdtem tanulni itthoni körülmények között, a magas érdeklődésnek köszönhetően egyre több kihívást sikerült teljesítenem, ami mégközelebb hozott a webfejlesztői szakmához.</p>
+                               <p>Középiskolai tanulmányok mellett elkezdtem tanulni itthoni körülmények között, a magas érdeklődésnek köszönhetően egyre több kihívást sikerült teljesítenem, ami még közelebb hozott a webfejlesztői szakmához.</p>
                                <p>Szeretem a kreativitást, lenyűgöző, hogy egy fehér oldalból mit lehet kihozni megfelelő tudással. Részese szerettem volna lenni ennek.</p>
                             </div>
                         }
