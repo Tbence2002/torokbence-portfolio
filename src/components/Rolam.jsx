@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import rolam from '../assets/rolamkep.png'
 import "./rolam.css"
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
@@ -17,84 +17,96 @@ function Rolam() {
 
   useEffect(() => {
     if (inView) {
-      gsap.set('.html, .css, .js, .react, .angular, .figma', { y: '-50px', opacity:0});
-      gsap.set('.mysql, .mongodb, .nodejs, .git', { y: '50px', opacity:0});
+      gsap.set('.html, .css,.scss, .js, .react, .angular', { y: '-50px', opacity: 0 });
+      gsap.set('.figma, .mysql, .mongodb, .nodejs, .git, .bootstrap', { y: '50px', opacity: 0 });
 
       gsap.to('.html', {
         duration: 0.8,
         y: '0px',
-        opacity:1,
+        opacity: 1,
         ease: 'power2.inOut',
         delay: 0,
-      }); 
-
+      });
       gsap.to('.css', {
         duration: 0.8,
         y: '0px',
-        opacity:1,
+        opacity: 1,
         ease: 'power2.inOut',
         delay: 0.1,
       });
-
+      gsap.to('.scss', {
+        duration: 0.8,
+        y: '0px',
+        opacity: 1,
+        ease: 'power2.inOut',
+        delay: 0.2,
+      });
       gsap.to('.js', {
         duration: 0.8,
         y: '0px',
-        opacity:1,
+        opacity: 1,
         ease: 'power2.inOut',
-        delay: 0.2,
+        delay: 0.3,
       });
       gsap.to('.react', {
         duration: 0.8,
         y: '0px',
-        opacity:1,
+        opacity: 1,
         ease: 'power2.inOut',
-        delay: 0.3,
+        delay: 0.4,
       });
       gsap.to('.angular', {
         duration: 0.8,
         y: '0px',
-        opacity:1,
+        opacity: 1,
         ease: 'power2.inOut',
-        delay: 0.4,
+        delay: 0.5,
       });
       gsap.to('.figma', {
         duration: 0.8,
         y: '0px',
-        opacity:1,
+        opacity: 1,
         ease: 'power2.inOut',
-        delay: 0.5,
+        delay: 0,
       });
       gsap.to('.git', {
         duration: 0.8,
         y: '0px',
-        opacity:1,
+        opacity: 1,
         ease: 'power2.inOut',
-        delay: 0,
+        delay: 0.1,
       });
       gsap.to('.mysql', {
         duration: 0.8,
         y: '0px',
-        opacity:1,
+        opacity: 1,
         ease: 'power2.inOut',
-        delay: 0.1,
+        delay: 0.2,
       });
       gsap.to('.mongodb', {
         duration: 0.8,
         y: '0px',
-        opacity:1,
+        opacity: 1,
         ease: 'power2.inOut',
-        delay: 0.2,
+        delay: 0.3,
       });
       gsap.to('.nodejs', {
         duration: 0.8,
         y: '0px',
-        opacity:1,
+        opacity: 1,
         ease: 'power2.inOut',
-        delay: 0.3,
+        delay: 0.4,
+      });
+      gsap.to('.bootstrap', {
+        duration: 0.8,
+        y: '0px',
+        opacity: 1,
+        ease: 'power2.inOut',
+        delay: 0.5,
       });
     } else {
-      gsap.set('.html, .css, .js, .react, .angular, .figma, .git', { y: '-50px', opacity:0});
-      gsap.set('.mysql, .mongodb, .nodejs', { y: '50px', opacity:0});
+      gsap.set('.html, .css, .js, .react, .angular, .git', { y: '-50px', opacity: 0 });
+      gsap.set('.figma, .mysql, .mongodb, .nodejs, .bootstrap', { y: '50px', opacity: 0 });
     }
   }, [inView]);
 
@@ -110,8 +122,8 @@ function Rolam() {
             legjobb tudásomat beleadva, szenvedéllyel. - Ezt az álláspontomat mai napig fenntartom. </p>
           <p>A végcélom a szakmában, hogy eljussak a Full Stack fejlesztő szintre.</p>
           <div className="social">
-            <a href="https://github.com/Tbence2002" target="_blank" rel="noreferrer"><FaGithubSquare className='github'/></a>
-            <a href="https://www.linkedin.com/in/t%C3%B6r%C3%B6k-bence-50653227b/" target='_blank' rel="noreferrer"><FaLinkedin className='linkedin'/></a>
+            <a href="https://github.com/Tbence2002" target="_blank" rel="noreferrer"><FaGithubSquare className='github' /></a>
+            <a href="https://www.linkedin.com/in/t%C3%B6r%C3%B6k-bence-50653227b/" target='_blank' rel="noreferrer"><FaLinkedin className='linkedin' /></a>
             <a href="https://www.facebook.com/profile.php?id=100010262581469" target='_blank' rel="noreferrer"><FaFacebookSquare className='facebook' /></a>
           </div>
         </div>
@@ -177,61 +189,67 @@ function Rolam() {
           <h2>Képességeim</h2>
         </div>
         <div className="rolam-skills">
-          <div className="rolam-skills-frontend" ref={ref}>
-             <div className="skills-box html">
-                <div className="skills-content">
-                  <h3>HTML</h3>
-                </div>
-              </div>
-              <div className="skills-box css">
-                <div className="skills-content">
-                  <h3>CSS</h3>
-                </div>
-              </div>
-              <div className="skills-box js">
-                <div className="skills-content">
-                  <h3>JavaScript</h3>
-                </div>
-              </div>
-              <div className="skills-box react">
-                <div className="skills-content">
-                  <h3>ReactJS</h3>
-                </div>
-              </div>
-              <div className="skills-box angular">
-                <div className="skills-content">
-                  <h3>Angular</h3>
-                </div>
-              </div>
-              <div className="skills-box figma">
-                <div className="skills-content">
-                  <h3>Figma</h3>
-                </div>
-              </div>
-          </div>
-          <div className='rolam-skills-backend'>
-          <div className="skills-box git">
+          <div className="rolam-skills-wrapper" ref={ref}>
+            <div className="skills-box html">
               <div className="skills-content">
-                <p>Verziókezelés</p>
+                <h3>HTML</h3>
+              </div>
+            </div>
+            <div className="skills-box css">
+              <div className="skills-content">
+                <h3>CSS</h3>
+              </div>
+            </div>
+            <div className="skills-box scss">
+              <div className="skills-content">
+                <h3>Sass</h3>
+              </div>
+            </div>
+            <div className="skills-box js">
+              <div className="skills-content">
+                <h3>JavaScript</h3>
+              </div>
+            </div>
+            <div className="skills-box react">
+              <div className="skills-content">
+                <h3>React</h3>
+              </div>
+            </div>
+            <div className="skills-box angular">
+              <div className="skills-content">
+                <h3>Angular</h3>
+              </div>
+            </div>
+          </div>
+          <div className='rolam-skills-wrapper'>
+          <div className="skills-box figma">
+              <div className="skills-content">
+                <h3>Figma</h3>
+              </div>
+            </div>
+            <div className="skills-box git">
+              <div className="skills-content">
                 <h3>GitHub</h3>
               </div>
             </div>
-             <div className="skills-box mysql">
+            <div className="skills-box mysql">
               <div className="skills-content">
-                <p>Backend</p>
                 <h3>MySQL</h3>
               </div>
             </div>
             <div className="skills-box mongodb">
               <div className="skills-content">
-                <p>Backend</p>
                 <h3>MongoDB</h3>
               </div>
             </div>
             <div className="skills-box nodejs">
               <div className="skills-content">
-                <p>Backend</p>
                 <h3>NodeJS</h3>
+              </div>
+            </div>
+            <div className="skills-box bootstrap">
+              <div className="skills-content">
+                <h3>Bootstrap</h3>
               </div>
             </div>
           </div>
