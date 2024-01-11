@@ -102,7 +102,7 @@ function Rolam() {
     <div className='rolam-container' id='rolam' >
       <ScrollAnimation result="rolam-content">
         <div className="rolam-text">
-          <p>Bemutatkozom</p>
+          <p>Bemutatkozás</p>
           <h2>Rólam</h2>
           <p>Török Bence vagyok, Junior Frontend fejlesztő React keretrendszerben. Érdeklődésem a weboldal fejlesztés felé kisebb koromig visszanyúlik, ezért középiskolai tanulmányaimat Informatika
             ágazaton végeztem el, ami megerősített abban, hogy Webfejlesztő legyek, így elvégeztem egy Szoftverfejlesztő-és tesztelő 2 éves képzést is.</p>
