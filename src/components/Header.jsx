@@ -16,9 +16,9 @@ function Header() {
             <div className="menu-close" onClick={() => setActive(!active)}>
               <IoMdClose />
             </div>
-            <li className='rolam'><a href="#rolam" rel="noreferrer">Rólam</a></li>
-            <li className='munkaim'><a href="#munkaim" rel="noreferrer">Munkáim</a></li>
-            <li className='kapcsolat'><a href="#kapcsolat" rel="noreferrer">Kapcsolat</a></li>
+            <li onClick={()=> setActive(false)} className='rolam'><a href="#rolam" rel="noreferrer">Rólam</a></li>
+            <li onClick={()=> setActive(false)} className='munkaim'><a href="#munkaim" rel="noreferrer">Munkáim</a></li>
+            <li onClick={()=> setActive(false)} className='kapcsolat'><a href="#kapcsolat" rel="noreferrer">Kapcsolat</a></li>
           </ul>
         </nav>
       </header>
