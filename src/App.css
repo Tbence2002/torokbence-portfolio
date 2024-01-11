@@ -5,8 +5,11 @@
     --darkblue: #5F7ADB;
     --darkgrey: #26292B;
 }
-html {
-    scroll-behavior: smooth;
+@media(prefers-reduced-motion: no-preference) {
+    :has(:target) {
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+    }
 }
 * {
     box-sizing: border-box;
