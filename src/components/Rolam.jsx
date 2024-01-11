@@ -190,7 +190,7 @@ function Rolam() {
               </div>
               <div className="skills-box js">
                 <div className="skills-content">
-                  <h3>JavScript</h3>
+                  <h3>JavaScript</h3>
                 </div>
               </div>
               <div className="skills-box react">
