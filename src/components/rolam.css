@@ -69,21 +69,15 @@
     flex-direction: column;
     gap:1.5rem;
 }
-.rolam-skills-frontend, .rolam-skills-backend {
+.rolam-skills-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap:1.5rem;
 }
-.rolam-skills-frontend .skills-box {
+.rolam-skills-wrapper .skills-box {
     padding: 1rem 2rem;
     background: var(--lightblue);
     color: var(--darkgrey);
-    opacity: 0;
-}
-.rolam-skills-backend .skills-box {
-    background: var(--lightblue);
-    color: var(--darkgrey);
-    padding: 0.5rem 2rem;
     opacity: 0;
 }
 .skills-content p {
@@ -117,7 +111,7 @@
     .kepessegek-content .rolam-text {
         margin-bottom: 1rem;
     }
-    .rolam-skills-frontend, .rolam-skills-backend {
+    .rolam-skills-wrapper {
         justify-content: center;
     }
 }
@@ -131,7 +125,7 @@
 }
 /* Skills section kisebb képernyőn. */
 @media(max-width:625px) {
-    .rolam-skills-frontend .skills-box, .rolam-skills-backend .skills-box {
+    .rolam-skills-wrapper .skills-box {
         width:150px;
         text-align: center;
     }
