@@ -22,15 +22,6 @@
     background-color: #000;
     opacity: .1;
 }
-.hero-bg-layer-1 {
-    background: url('../assets/bg-left-right-layer.webp') no-repeat center center;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    bottom: -750px; 
-    z-index: 3;
-}
 .hero-bg-layer-2 {
     background: url('../assets/bg-center-layer.webp') no-repeat center center;
     background-size: cover;
