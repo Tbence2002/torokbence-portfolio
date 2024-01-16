@@ -1,5 +1,6 @@
 .hero-container {
     height: 100vh;
+    height: 100svh;
     width: 100%;
     background-size: cover;
     object-fit: cover;
