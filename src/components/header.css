@@ -81,7 +81,7 @@ header ul li a:hover:before {
         padding: 4rem 3rem;
         transform: translatey(-100%);
         transition: .7s;
-        animation: 1s menu forwards;
+        animation: 0.0001s menu forwards;
     }
     @keyframes menu {
         0% {
