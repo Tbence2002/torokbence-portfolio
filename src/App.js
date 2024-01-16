@@ -1,13 +1,14 @@
-import React, {useState} from 'react';
+import React, {Suspense, lazy, useState} from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Rolam from './components/Rolam';
-import Munkaim from './components/Munkaim';
-import Kapcsolat from './components/Kapcsolat';
-import Footer from './components/Footer';
-import IsmerjenMeg from './components/IsmerjenMeg';
 import './App.css';
 import 'react-vertical-timeline-component/style.min.css';
+
+const Rolam = lazy(() => import('./components/Rolam'));
+const Munkaim = lazy(() => import('./components/Munkaim'));
+const Kapcsolat = lazy(() => import('./components/Kapcsolat'));
+const Footer = lazy(() => import('./components/Footer'));
+const IsmerjenMeg = lazy(() => import('./components/IsmerjenMeg'));
 
 function App() {
   const [next, setNext] = useState(1);
@@ -16,11 +17,25 @@ function App() {
     <div className="home-container">
       <Header/>
       <Hero/>
-      <IsmerjenMeg/>
-      <Rolam/>
-      <Munkaim next={next} setNext={setNext}/>
-      <Kapcsolat/>
-      <Footer/>
+      <Suspense fallback={<div>Betöltés...</div>}>
+       <IsmerjenMeg/>
+      </Suspense>
+
+      <Suspense fallback={<div>Betöltés...</div>}>
+        <Rolam/>
+      </Suspense>
+
+      <Suspense fallback={<div>Betöltés...</div>}>
+        <Munkaim next={next} setNext={setNext}/>
+      </Suspense>
+
+      <Suspense fallback={<div>Betöltés...</div>}>
+        <Kapcsolat/>
+      </Suspense>
+
+      <Suspense fallback={<div>Betöltés...</div>}>
+        <Footer/>
+      </Suspense>
     </div>
   );
 }
