@@ -52,7 +52,7 @@ function IsmerjenMeg() {
         };
     }, []);
     const showImc = () => {
-        if (window.scrollY >= 650) {
+        if (window.scrollY >= 550) {
             setShowImc(true);
         } else {
             setShowImc(false);
@@ -73,7 +73,7 @@ function IsmerjenMeg() {
                         {active === 1 &&
                             <div className="imc-welcome">
                                 <div onClick={() => setActive(2)} className={active === 2 ? "activemenu imc-welcome-content" : "imc-welcome-content"}>
-                                    <img src={chatimage} alt="Tesztkep" />
+                                    <img src={chatimage} alt="chatimage" />
                                     <div className="imc-welcome-text">
                                         <h3>Török Bence</h3>
                                         <span>Hobbijaim</span>
