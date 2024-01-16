@@ -23,13 +23,13 @@ function Header() {
   return (
     <div className='header-container'>
       <header className='header'>
-        <div className="menu-open" onClick={() => setActive(!active)}>
-          <HiOutlineMenuAlt2 />
+        <div className="menu-open">
+          <HiOutlineMenuAlt2 onClick={() => setActive(!active)} />
         </div>
         <nav>
           <ul className={active ? "show-nav" : ""}>
-            <div className="menu-close" onClick={() => setActive(!active)}>
-              <IoMdClose />
+            <div className="menu-close">
+              <IoMdClose onClick={() => setActive(!active)}/>
             </div>
             <li onClick={()=> setActive(false)} className='rolam'><a href="#rolam" rel="noreferrer">Rólam</a></li>
             <li onClick={()=> setActive(false)} className='munkaim'><a href="#munkaim" rel="noreferrer">Munkáim</a></li>
