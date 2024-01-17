@@ -110,9 +110,8 @@ function IsmerjenMeg() {
                                     <MdOutlineKeyboardBackspace onClick={()=> setActive(1)} className='back' />
                                     <h3>Hobbijaim</h3>
                                 </div>
-                                <p>Gyakorlás és önfejlesztés mellett, nagyon szeretek a szabadban lenni, ebből kifolyólag sokat túrázom, evezek a barátaimmal.</p>
+                                <p>Gyakorlás és önfejlesztés mellett, nagyon szeretek a szabadban lenni, ebből kifolyólag sokat túrázom, biciklizek, evezek a barátaimmal.</p>
                                 <p>Kedvenc időtöltésem a horgászat, amelyet már több mint 10 éve űzök. Büszkeséggel tölt el, hogy ez idő alatt sok barátommal sikerült megszerettetnem ezt a hobbit.</p>
-                                <p>Szeretek biciklizni, ha tehetem minden nap megyek, sokszor az időjárás sem akadályoz meg ebben.</p>
                             </div>
                         }
                         {active === 3 &&
@@ -121,8 +120,8 @@ function IsmerjenMeg() {
                                     <MdOutlineKeyboardBackspace onClick={()=> setActive(1)} className='back' />
                                     <h3>Mit szeretnék elérni? </h3>
                                 </div>
-                                <p>A szakmával hosszú távra tervezek, szeretném elérni a Full Stack fejlesztő szintet.</p>
-                                <p>Ahogy a szakmában, úgy egy cégen belül is hosszú távra tervezek, ezért törekszem arra, hogy a lehető összes projekt amiben részt veszek sikert érjen el a cég, illetve a csapat javára.</p>
+                                <p>A szakmával hosszú távra tervezek, szeretném elérni a Full Stack fejlesztő szintet</p>
+                                <p>Egy adott cégnél is hosszú távra tervezek, ezért törekszem arra, hogy a lehető összes projekt amiben részt veszek sikert érjen el.</p>
                             </div>
                         }
                         {active === 4 &&
@@ -132,7 +131,7 @@ function IsmerjenMeg() {
                                     <h3>Miért a webfejlesztés?</h3>
                                 </div>
                                 <p>Mindig is lenyűgöztek a kreatív weboldalak, sokszor foglalkoztatott a kérdés, hogy hogyan készült?</p>
-                                <p>Középiskolai tanulmányok mellett elkezdtem tanulni itthoni körülmények között, a magas érdeklődésnek köszönhetően egyre több kihívást sikerült teljesítenem, ami még közelebb hozott a webfejlesztői szakmához.</p>
+                                <p>Középiskolai tanulmányok mellett elkezdtem tanulni itthoni körülmények között, a nagy érdeklődésnek köszönhetően egyre több kihívást sikerült teljesítenem, ami még közelebb hozott a webfejlesztői szakmához.</p>
                                 <p>Szeretem a kreativitást, lenyűgöző, hogy egy fehér oldalból mit lehet kihozni megfelelő tudással. Részese szerettem volna lenni ennek.</p>
                             </div>
                         }
