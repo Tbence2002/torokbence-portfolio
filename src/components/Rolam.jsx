@@ -18,7 +18,8 @@ function Rolam() {
   useEffect(() => {
     if (inView) {
       gsap.set('.html, .css,.scss, .js, .react, .angular', { y: '-50px', opacity: 0 });
-      gsap.set('.figma, .mysql, .mongodb, .nodejs, .git, .bootstrap', { y: '50px', opacity: 0 });
+      gsap.set('.figma, .git, .mysql, .mongodb, .firebase, .nodejs', { y: '50px', opacity: 0 });
+      gsap.set('.boostrap, .tailwindcss', { y: '50px', opacity:0 });
 
       gsap.to('.html', {
         duration: 0.8,
@@ -90,23 +91,38 @@ function Rolam() {
         ease: 'power2.inOut',
         delay: 0.3,
       });
-      gsap.to('.nodejs', {
+      gsap.to('.firebase', {
         duration: 0.8,
         y: '0px',
         opacity: 1,
         ease: 'power2.inOut',
         delay: 0.4,
       });
-      gsap.to('.bootstrap', {
+      gsap.to('.nodejs', {
         duration: 0.8,
         y: '0px',
         opacity: 1,
         ease: 'power2.inOut',
         delay: 0.5,
       });
+      gsap.to('.bootstrap', {
+        duration: 0.8,
+        y: '0px',
+        opacity: 1,
+        ease: 'power2.inOut',
+        delay: 0.2,
+      });
+      gsap.to('.tailwindcss', {
+        duration: 0.8,
+        y: '0px',
+        opacity: 1,
+        ease: 'power2.inOut',
+        delay: 0.3,
+      });
     } else {
       gsap.set('.html, .css, .js, .react, .angular, .git', { y: '-50px', opacity: 0 });
-      gsap.set('.figma, .mysql, .mongodb, .nodejs, .bootstrap', { y: '50px', opacity: 0 });
+      gsap.set('.figma,.git, .mysql, .mongodb, .firebase, .nodejs ', { y: '50px', opacity: 0 });
+      gsap.set('.bootstrap, .tailwindcss', { y:'50px', opacity:0 });
     }
   }, [inView]);
 
@@ -117,9 +133,8 @@ function Rolam() {
           <p>Bemutatkozom</p>
           <h2>Rólam</h2>
           <p>Török Bence vagyok, Junior Frontend fejlesztő React keretrendszerben. Érdeklődésem a weboldal fejlesztés felé kisebb koromig visszanyúlik, ezért középiskolai tanulmányaimat Informatika
-            ágazaton végeztem el, ami megerősített abban, hogy Webfejlesztő legyek, így elvégeztem egy Szoftverfejlesztő-és tesztelő 2 éves képzést is.</p>
-          <p>Számomra nagyon fontos a fejlődés, szabadidőmben nagyon sok időt fordítok az önfejlesztésre, valamint a gyakorlásra. Mindig tudtam, hogy ez az a munka, amelyet örömmel, lelkiismeretesen végzek,
-            legjobb tudásomat beleadva, szenvedéllyel. - Ezt az álláspontomat mai napig fenntartom. </p>
+            ágazaton végeztem el, ami megerősített abban, hogy Webfejlesztő legyek, így elvégeztem egy 2 éves  Szoftverfejlesztő-és tesztelő képzést is.</p>
+          <p>Számomra nagyon fontos a fejlődés, szabadidőmben nagyon sok időt fordítok az önfejlesztésre, valamint a gyakorlásra. A rám bízott feladatokat mindig a legjobb tudásom szerint valósítom meg, a legnagyobb pontossággal. </p>
           <p>A végcélom a szakmában, hogy eljussak a Full Stack fejlesztő szintre.</p>
           <div className="social">
             <a href="https://github.com/Tbence2002" target="_blank" rel="noreferrer"><FaGithubSquare className='github' /></a>
@@ -242,16 +257,29 @@ function Rolam() {
                 <h3>MongoDB</h3>
               </div>
             </div>
+            <div className="skills-box firebase">
+              <div className="skills-content">
+                <h3>Firebase</h3>
+              </div>
+            </div>
             <div className="skills-box nodejs">
               <div className="skills-content">
                 <h3>NodeJS</h3>
               </div>
             </div>
-            <div className="skills-box bootstrap">
+          </div>
+          <div className='rolam-skills-wrapper'>
+          <div className="skills-box bootstrap">
               <div className="skills-content">
                 <h3>Bootstrap</h3>
               </div>
             </div>
+            <div className="skills-box tailwindcss">
+              <div className="skills-content">
+                <h3>TailwindCSS</h3>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
