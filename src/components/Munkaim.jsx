@@ -2,7 +2,7 @@ import React from 'react'
 import toast from 'react-hot-toast'
 import ScrollAnimation from './ScrollAnimation'
 import bdportfolio from '../assets/bdportfolio.jpg'
-import patakparlat from '../assets/patak.jpg'
+import patakparlat from '../assets/patakparlat.jpg'
 import vadasztarsasag from '../assets/Fooldal.jpg'
 import cipowebshop from '../assets/cipowebshop.jpg'
 import mozi from '../assets/mozi.jpg'
@@ -32,7 +32,7 @@ function Munkaim({ next, setNext }) {
                                 <div className="works-text">
                                     <p>Egyéni munka</p>
                                     <h3>Cipő Webshop Projekt</h3>
-                                    <p>Egy korszerű, felhasználóbarát cipő webáruház Frontend terve, ahol a vásárlók kényelmesen tudnak nézelődni. </p>
+                                    <p>Egy korszerű, felhasználóbarát cipő webáruház Frontend megvalósítása. Kialakításkor külön figyelmet fektettem a felhasználói élményekre. </p>
                                     <p className='cipo-text'>A weboldal kizárólag látvány miatt készült, nem tartalmaz Backendet, így a rendelés, vásárlás funkciók nem működnek.</p>
                                     <div className="technologia">
                                         <p>Technológia:</p>
@@ -55,7 +55,7 @@ function Munkaim({ next, setNext }) {
                                 <div className="works-text">
                                     <p>Egyéni munka</p>
                                     <h3>Balogh Dávid portfolió</h3>
-                                    <p>A projektben törekedtem arra, hogy egy átfogó weboldalt készítsek, amely megfelel a mai elvárásoknak, és felhasználóbarát élményt nyújt.</p>
+                                    <p>A projektben törekedtem arra, hogy egy átfogó weboldalt készítsek, amely megfelel a mai elvárásoknak, és élményt nyújt a felhasználónak.</p>
                                     <p>Külön figyelmet fektettem a keresőoptimalizálásra, az animációkra és a megjelenésre, amely növeli a látogató benyomását. </p>
                                     <div className="technologia">
                                         <p>Technológia:</p>
