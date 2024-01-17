@@ -128,5 +128,6 @@
     .rolam-skills-wrapper .skills-box {
         width:150px;
         text-align: center;
+        padding: 1rem 0rem;
     }
 }
