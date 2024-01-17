@@ -60,10 +60,6 @@ function Kapcsolat() {
                             <p>Email</p>
                             <p>torokbencee.2002@gmail.com</p>
                         </div>
-                        <div className="tel">
-                            <p>Telefon</p>
-                            <p>+36203758874</p>
-                        </div>
                         <div className="email-anim-container">
                             <div className="email-anim">
                                 <Lottie animationData={animationData} />
