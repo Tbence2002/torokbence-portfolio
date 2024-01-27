@@ -1,17 +1,13 @@
 import React from 'react'
-import toast from 'react-hot-toast'
 import ScrollAnimation from './ScrollAnimation'
-import bdportfolio from '../assets/bdportfolio.jpg'
 import patakparlat from '../assets/patakparlat.jpg'
-import vadasztarsasag from '../assets/Fooldal.jpg'
+import vadasztarsasag from '../assets/vadasztarsasag.jpg'
 import cipowebshop from '../assets/cipowebshop.jpg'
 import mozi from '../assets/mozi.jpg'
 import Slide from './Slide'
 import "./munkaim.css"
 function Munkaim({ next, setNext }) {
-    function handleWorking() {
-        toast.error("Az oldal fejlesztés alatt!");
-    }
+
     return (
         <div className="munkaim-container" id='munkaim'>
             <div className="munkaim-content">
@@ -49,21 +45,21 @@ function Munkaim({ next, setNext }) {
                             <div className="works-content">
                                 <div className="works-image">
                                     <div className="work">
-                                        <img src={bdportfolio} alt="Balogh Dávid Portfolió" />
+                                        <img src={vadasztarsasag} alt="Vadásztársaság" />
                                     </div>
                                 </div>
                                 <div className="works-text">
-                                    <p>Egyéni munka</p>
-                                    <h3>Balogh Dávid portfolió</h3>
-                                    <p>A projektben törekedtem arra, hogy egy átfogó weboldalt készítsek, amely megfelel a mai elvárásoknak, és élményt nyújt a felhasználónak.</p>
-                                    <p>Külön figyelmet fektettem a keresőoptimalizálásra, az animációkra és a megjelenésre, amely növeli a látogató benyomását. </p>
+                                    <p>Csapatmunka</p>
+                                    <h3>Vadásztársaság Projekt</h3>
+                                    <p>Készítéskor törekedtem a reszponzivitásra, illetve a mai modern design elvárásokra, együttműködve egy Backend fejlesztővel az adatok biztonságos tárolása végett.</p>
+                                    <p>Tartalmaz admin oldalt, ahol lehet képeket, híreket és tagokat közzétenni.</p>
                                     <div className="technologia">
                                         <p>Technológia:</p>
-                                        <p>HTML, CSS, React, GSAP</p>
+                                        <p>HTML, CSS, React, Firebase, Framer-motion</p>
                                     </div>
                                     <div className="demo">
-                                        <a href="https://baloghjavadev.com/" target='_blank' rel="noreferrer"><button>Demo</button></a>
-                                        <a href="https://github.com/Florex001/portfolio-web-2.0" target='_blank' rel="noreferrer"><button>GitHub</button></a>
+                                        <a href="https://dusana-vadasztarsasag.vercel.app/" target='_blank' rel="noreferrer"><button>Demo</button></a>
+                                        <a href="https://github.com/Tbence2002/dusana-vadasztarsasag" target='_blank' rel="noreferrer"><button>GitHub</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -115,29 +111,6 @@ function Munkaim({ next, setNext }) {
                                     </div>
                                     <div className="demo">
                                         <a href="https://github.com/Tbence2002/Popcorn_city" target='_blank' rel="noreferrer"><button>GitHub</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </ScrollAnimation>
-                        <ScrollAnimation result="works-box">
-                            <div className="works-content">
-                                <div className="works-image">
-                                    <div className="work">
-                                        <img src={vadasztarsasag} alt="Vadásztársaság" />
-                                    </div>
-                                </div>
-                                <div className="works-text">
-                                    <p>Egyéni munka</p>
-                                    <h3>Vadásztársaság Projekt</h3>
-                                    <p>Vadászat témájú weboldal, melynek készítésekor törekedtem a reszponzív nézetre, illetve a mai modern design elvárásokra.</p>
-                                    <p>Tartalmaz admin oldalt, ahol lehet képeket, híreket és tagokat közzétenni.</p>
-                                    <div className="technologia">
-                                        <p>Technológia:</p>
-                                        <p>HTML, CSS, React, NodeJS, MySQL, Firebase</p>
-                                    </div>
-                                    <div className="demo">
-                                        <button onClick={handleWorking}>Demo</button>
-                                        <a href="https://github.com/Tbence2002/dusana_vadasztarsasag" target='_blank' rel="noreferrer"><button>GitHub</button></a>
                                     </div>
                                 </div>
                             </div>
