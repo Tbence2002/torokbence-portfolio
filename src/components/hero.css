@@ -54,10 +54,12 @@
     margin: 0;
     font-size: calc(3rem + (53 - 16) * ((100vw - 320px) / (1600 - 320)));
     text-transform: uppercase;
+    opacity: 0;
 }
 .hero-bg-text p {
     font-size: calc(1.5rem + (31 - 12) * ((100vw - 320px) / (1600 - 320)));
     margin: 0;
+    opacity: 0;
 }
 @media(max-width:612px) {
     .hero-container {
