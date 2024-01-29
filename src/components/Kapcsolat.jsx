@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import "./kapcsolat.css"
-import { FaFacebookSquare, FaLinkedin, FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import Lottie from 'lottie-react';
 import animationData from '../assets/kapcsolat.json'
 import emailjs from '@emailjs/browser';
@@ -51,7 +51,6 @@ function Kapcsolat() {
                         <div className="kapcsolat-elerhetoseg">
                             <h3>Elérhetőségek</h3>
                             <div className="social">
-                                <a href="https://www.facebook.com/profile.php?id=100010262581469" target='_blank' rel="noreferrer"><FaFacebookSquare  className='facebook'/></a>
                                 <a href="https://www.linkedin.com/in/t%C3%B6r%C3%B6k-bence-50653227b/" target='_blank' rel="noreferrer"><FaLinkedin className='github' /></a>
                                 <a href="https://github.com/Tbence2002" target="_blank" rel="noreferrer"><FaGithubSquare className='github'/></a>
                             </div>
