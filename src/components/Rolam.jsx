@@ -4,7 +4,7 @@ import "./rolam.css"
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { IoSchool } from "react-icons/io5";
-import { FaGithubSquare, FaLinkedin, FaCode, FaFacebookSquare } from "react-icons/fa";
+import { FaGithubSquare, FaLinkedin, FaCode } from "react-icons/fa";
 import ScrollAnimation from './ScrollAnimation'
 import { useInView } from 'react-intersection-observer';
 import { gsap } from 'gsap';
@@ -139,7 +139,6 @@ function Rolam() {
           <div className="social">
             <a href="https://github.com/Tbence2002" target="_blank" rel="noreferrer"><FaGithubSquare className='github' /></a>
             <a href="https://www.linkedin.com/in/t%C3%B6r%C3%B6k-bence-50653227b/" target='_blank' rel="noreferrer"><FaLinkedin className='linkedin' /></a>
-            <a href="https://www.facebook.com/profile.php?id=100010262581469" target='_blank' rel="noreferrer"><FaFacebookSquare className='facebook' /></a>
           </div>
         </div>
         <div className="rolam-image">
