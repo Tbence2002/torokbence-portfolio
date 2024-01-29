@@ -55,7 +55,7 @@ function Munkaim({ next, setNext }) {
                                     <p>Tartalmaz admin oldalt, ahol lehet képeket, híreket és tagokat közzétenni.</p>
                                     <div className="technologia">
                                         <p>Technológia:</p>
-                                        <p>HTML, CSS, React, Firebase, Framer-motion</p>
+                                        <p>HTML, CSS, React, Firebase, Spring, MySQL, Framer-motion</p>
                                     </div>
                                     <div className="demo">
                                         <a href="https://dusana-vadasztarsasag.vercel.app/" target='_blank' rel="noreferrer"><button>Demo</button></a>
