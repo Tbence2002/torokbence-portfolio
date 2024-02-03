@@ -21,3 +21,13 @@ body {
     color:#fff;
     font-family:'Poppins', sans-serif;
 }
+@media(max-width:490px) {
+    body {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+}
