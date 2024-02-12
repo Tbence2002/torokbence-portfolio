@@ -19,7 +19,7 @@ function Rolam() {
     if (inView) {
       gsap.set('.html, .css,.scss, .js, .react, .angular', { y: '-50px', opacity: 0 });
       gsap.set('.figma, .git, .mysql, .mongodb, .firebase, .nodejs', { y: '50px', opacity: 0 });
-      gsap.set('.boostrap, .tailwindcss', { y: '50px', opacity:0 });
+      gsap.set('.boostrap, .tailwindcss', { y: '50px', opacity: 0 });
 
       gsap.to('.html', {
         duration: 0.8,
@@ -122,7 +122,7 @@ function Rolam() {
     } else {
       gsap.set('.html, .css, .js, .react, .angular, .git', { y: '-50px', opacity: 0 });
       gsap.set('.figma,.git, .mysql, .mongodb, .firebase, .nodejs ', { y: '50px', opacity: 0 });
-      gsap.set('.bootstrap, .tailwindcss', { y:'50px', opacity:0 });
+      gsap.set('.bootstrap, .tailwindcss', { y: '50px', opacity: 0 });
     }
   }, [inView]);
 
@@ -156,14 +156,14 @@ function Rolam() {
               className="vertical-timeline-element--work"
               contentStyle={{ background: '#5F7ADB', color: '#fff' }}
               contentArrowStyle={{ borderRight: '7px solid  #5F7ADB' }}
-              date="2017 - 2021"
+              date="2023.10.03. - 2024.02.12."
               iconStyle={{ background: '#5F7ADB', color: '#fff' }}
-              icon={<IoSchool />}
+              icon={<FaCode />}
             >
-              <h3 className="vertical-timeline-element-title">Érettségi</h3>
-              <h4 className="vertical-timeline-element-subtitle">Szent István Katolikus Technikum és Gimnázium</h4>
+              <h3 className="vertical-timeline-element-title">Webfejlesztő</h3>
+              <h4 className="vertical-timeline-element-subtitle">Kovács Művek Kft.</h4>
               <p>
-                Informatika szakirány, HTML, CSS, JS alapok.
+                HTML, CSS, JS, Bootstrap, Figma
               </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -184,14 +184,14 @@ function Rolam() {
               className="vertical-timeline-element--work"
               contentStyle={{ background: '#5F7ADB', color: '#fff' }}
               contentArrowStyle={{ borderRight: '7px solid  #5F7ADB' }}
-              date="2023.10.12. -"
+              date="2017 - 2021"
               iconStyle={{ background: '#5F7ADB', color: '#fff' }}
-              icon={<FaCode />}
+              icon={<IoSchool />}
             >
-              <h3 className="vertical-timeline-element-title">Webfejlesztő</h3>
-              <h4 className="vertical-timeline-element-subtitle">Kovács Művek Kft.</h4>
+              <h3 className="vertical-timeline-element-title">Érettségi</h3>
+              <h4 className="vertical-timeline-element-subtitle">Szent István Katolikus Technikum és Gimnázium</h4>
               <p>
-                HTML, CSS, JS, Bootstrap, Figma
+                Informatika szakirány, HTML, CSS, JS alapok.
               </p>
             </VerticalTimelineElement>
           </VerticalTimeline>
@@ -236,7 +236,7 @@ function Rolam() {
             </div>
           </div>
           <div className='rolam-skills-wrapper'>
-          <div className="skills-box figma">
+            <div className="skills-box figma">
               <div className="skills-content">
                 <h3>Figma</h3>
               </div>
@@ -268,7 +268,7 @@ function Rolam() {
             </div>
           </div>
           <div className='rolam-skills-wrapper'>
-          <div className="skills-box bootstrap">
+            <div className="skills-box bootstrap">
               <div className="skills-content">
                 <h3>Bootstrap</h3>
               </div>
@@ -278,7 +278,7 @@ function Rolam() {
                 <h3>TailwindCSS</h3>
               </div>
             </div>
-            
+
           </div>
         </div>
       </div>
