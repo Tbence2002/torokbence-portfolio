@@ -4,6 +4,7 @@ import patakparlat from '../assets/patakparlat.jpg'
 import vadasztarsasag from '../assets/vadasztarsasag.jpg'
 import cipowebshop from '../assets/cipowebshop.jpg'
 import mozi from '../assets/mozi.jpg'
+import weatherapp from '../assets/weatherapp.jpg'
 import Slide from './Slide'
 import "./munkaim.css"
 function Munkaim({ next, setNext }) {
@@ -29,7 +30,7 @@ function Munkaim({ next, setNext }) {
                                     <p>Egyéni munka</p>
                                     <h3>Cipő Webshop Projekt</h3>
                                     <p>Egy korszerű, felhasználóbarát cipő webáruház Frontend megvalósítása. Kialakításkor külön figyelmet fektettem a felhasználói élményekre. </p>
-                                    <p className='cipo-text'>A weboldal kizárólag látvány miatt készült, nem tartalmaz Backendet, így a rendelés, vásárlás funkciók nem működnek.</p>
+                                    <p className='italic-text'>A weboldal kizárólag látvány miatt készült, nem tartalmaz Backendet, így a rendelés, vásárlás funkciók nem működnek.</p>
                                     <div className="technologia">
                                         <p>Technológia:</p>
                                         <p>HTML, CSS, React</p>
@@ -68,6 +69,35 @@ function Munkaim({ next, setNext }) {
                             <div className="works-content">
                                 <div className="works-image">
                                     <div className="work">
+                                        <img src={weatherapp} alt="Időjárás App" />
+                                    </div>
+                                </div>
+                                <div className="works-text">
+                                    <p>Egyéni munka</p>
+                                    <h3>Időjárás App</h3>
+                                    <p>A webalkalmazás időjárás adatokat jelenít meg az Ön aktuális helyzete alapján, az OpenWeathermap API-t használva. </p>
+                                    <p className='italic-text'>A weboldalt tovább szeretném fejleszteni: a háttérkép mindig az aktuális időjárásnak megfelelően változzon.  </p>
+                                    <div className="technologia">
+                                        <p>Technológia:</p>
+                                        <p>React, Sass, Framer-motion, OpenWeathermap API</p>
+                                    </div>
+                                    <div className="demo">
+                                        <a href="https://weather-app-tbence2002.vercel.app/" target='_blank' rel="noreferrer"><button>Demo</button></a>
+                                        <a href="https://github.com/Tbence2002/weather_app" target='_blank' rel="noreferrer"><button>GitHub</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </ScrollAnimation>
+                        <Slide next={next} setNext={setNext} />
+                    </div>
+                }
+                {
+                    next === 2 &&
+                    <div className="rolam-works">
+                        <ScrollAnimation result="works-box">
+                            <div className="works-content">
+                                <div className="works-image">
+                                    <div className="work">
                                         <img src={patakparlat} alt="Patak-Párlat" />
                                     </div>
                                 </div>
@@ -87,12 +117,6 @@ function Munkaim({ next, setNext }) {
                                 </div>
                             </div>
                         </ScrollAnimation>
-                        <Slide next={next} setNext={setNext} />
-                    </div>
-                }
-                {
-                    next === 2 &&
-                    <div className="rolam-works">
                         <ScrollAnimation result="works-box">
                             <div className="works-content">
                                 <div className="works-image">
