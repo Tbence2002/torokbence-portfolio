@@ -5,10 +5,11 @@ import vadasztarsasag from '../assets/vadasztarsasag.jpg'
 import cipowebshop from '../assets/cipowebshop.jpg'
 import mozi from '../assets/mozi.jpg'
 import weatherapp from '../assets/weatherapp.jpg'
+import realtimechat from '../assets/realtimechatapp.jpg'
 import Slide from './Slide'
 import "./munkaim.css"
-function Munkaim({ next, setNext }) {
 
+function Munkaim({ next, setNext }) {
     return (
         <div className="munkaim-container" id='munkaim'>
             <div className="munkaim-content">
@@ -76,7 +77,7 @@ function Munkaim({ next, setNext }) {
                                     <p>Egyéni munka</p>
                                     <h3>Időjárás App</h3>
                                     <p>A webalkalmazás időjárás adatokat jelenít meg az Ön aktuális helyzete alapján, az OpenWeathermap API-t használva. </p>
-                                    <p className='italic-text'>A weboldalt tovább szeretném fejleszteni: a háttérkép mindig az aktuális időjárásnak megfelelően változzon.  </p>
+                                    <p className='italic-text'>Tovább fejlesztés: a háttérkép mindig az aktuális időjárásnak megfelelően változzon. - 2024.02.19., elkészült. </p>
                                     <div className="technologia">
                                         <p>Technológia:</p>
                                         <p>React, Sass, Framer-motion, OpenWeathermap API</p>
@@ -94,6 +95,29 @@ function Munkaim({ next, setNext }) {
                 {
                     next === 2 &&
                     <div className="rolam-works">
+                        <ScrollAnimation result="works-box">
+                            <div className="works-content">
+                                <div className="works-image">
+                                    <div className="work">
+                                        <img src={realtimechat} alt="RealtimeChatApp" />
+                                    </div>
+                                </div>
+                                <div className="works-text">
+                                    <p>Egyéni munka</p>
+                                    <h3>Realtime Chat App</h3>
+                                    <p>A weboldal egy valós idejű csoportos beszélgetést tesz lehetővé. Bejelentkezni Google fiókkal lehetséges.</p>
+                                    <p className='italic-text'>Tovább fejlesztésként szeretném megoldani, hogy egyedi, privát szobákat is létre lehessen hozni, így létrejönne a privát csevegés.</p>
+                                    <div className="technologia">
+                                        <p>Technológia:</p>
+                                        <p>React, TailwindCSS, daisyUI, Firebase</p>
+                                    </div>
+                                    <div className="demo">
+                                        <a href="https://realtimechat-app-ruby.vercel.app/" target='_blank' rel="noreferrer"><button>Demo</button></a>
+                                        <a href="https://github.com/Tbence2002/realtimechat-app" target='_blank' rel="noreferrer"><button>GitHub</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </ScrollAnimation>
                         <ScrollAnimation result="works-box">
                             <div className="works-content">
                                 <div className="works-image">
