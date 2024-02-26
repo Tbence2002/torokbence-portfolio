@@ -3,13 +3,16 @@ import "./hero.css"
 import {gsap} from 'gsap'
 
 function Hero() {
+
     useEffect(() => {
         gsap.set('.hero-bg-layer-1', { y: '0px' }); 
         gsap.set('.hero-bg-layer-2', { y: '-300px' });
         gsap.set('.hero-bg-title', {y:'-600px', opacity:0});
         gsap.set('.hero-bg-small-title', {y:'800px', opacity:0});
         gsap.set('.hero-bg-image', {y:'0'});
+
         const isMobile = window.innerWidth <= 612;
+        
         if(isMobile) {
           gsap.to('.hero-bg-layer-1', {
             duration: 3,
