@@ -72,7 +72,7 @@ function Kapcsolat() {
                                 <label htmlFor="teljes_nev">Teljes neve</label>
                             </div>
                             <div className="kapcsolat-message">
-                                <input type="text" name="email" onChange={(e)=> setEmail(e.target.value)} value={email} required />
+                                <input type="email" name="email" onChange={(e)=> setEmail(e.target.value)} value={email} required />
                                 <label htmlFor="email">Email címe</label>
                             </div>
                             <div className="kapcsolat-message">
