@@ -12,9 +12,14 @@ function Kapcsolat() {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
+    const validateEmail = (email) => {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+
     const confirmEmail = () => {
         if (name === "" || email === "" || message === "") {
-            toast.error("Üres mezők!")
+            toast.error("Hibásan kitöltött mezők!")
         } else {
             return
         }
@@ -23,6 +28,11 @@ function Kapcsolat() {
 
     const sendEmail = (e) => {
         e.preventDefault();
+
+        if (!validateEmail(email)) {
+            toast.error("Hibás email cím formátum!");
+            return; 
+        }
 
         emailjs.sendForm('service_5a9kffq', 'template_1lxlqsa', form.current, 'S9JxZg-_yZ4RLj0bo')
             .then((result) => {
@@ -72,7 +82,7 @@ function Kapcsolat() {
                                 <label htmlFor="teljes_nev">Teljes neve</label>
                             </div>
                             <div className="kapcsolat-message">
-                                <input type="email" name="email" onChange={(e)=> setEmail(e.target.value)} value={email} required />
+                                <input type="text" name="email" onChange={(e)=> setEmail(e.target.value)} value={email} required />
                                 <label htmlFor="email">Email címe</label>
                             </div>
                             <div className="kapcsolat-message">
@@ -80,7 +90,7 @@ function Kapcsolat() {
                                 <label htmlFor="uzenet">Üzenet</label>
                             </div>
                             <div className="kapcsolat-button">
-                                <button type='submit' onClick={confirmEmail} >Küldés</button>
+                                <button type='submit' onClick={confirmEmail}>Küldés</button>
                             </div>
                         </form>
                     </div>
