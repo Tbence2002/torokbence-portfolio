@@ -1,24 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import "./header.css"
 import { IoMdClose } from "react-icons/io";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 
 function Header() {
   const [active, setActive] = useState(false);
-
-  useEffect(() => {
-    if (active) {
-      document.body.style.overflow = 'hidden';
-      document.documentElement.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-      document.documentElement.style.overflow = 'auto';
-    }
-    return () => {
-      document.body.style.overflow = 'auto';
-      document.documentElement.style.overflow = 'auto';
-    };
-  }, [active]);
   
   return (
     <div className='header-container'>
