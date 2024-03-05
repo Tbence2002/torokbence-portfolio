@@ -51,15 +51,22 @@ function IsmerjenMeg() {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
-    const showImc = () => {
-        if (window.scrollY >= 550) {
-            setShowImc(true);
-        } else {
-            setShowImc(false);
+    useEffect(() => {
+        const showImc = () => {
+            if (window.scrollY >= 550) {
+                setShowImc(true);
+            } else {
+                setShowImc(false);
+            }
         }
-    }
+    
+        window.addEventListener('scroll', showImc);
 
-    window.addEventListener('scroll', showImc);
+        return () => {
+            window.removeEventListener('scroll', showImc);
+        };
+    }, []);
+
     return (
         <div className={showimc ? "showimc" : "ismerjen_meg_container"} onClick={handleOpen}>
             {/*Ismerjen meg container rövidítve innentől: imc*/}
