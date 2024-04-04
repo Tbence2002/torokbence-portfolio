@@ -197,7 +197,7 @@ function Rolam() {
               className="vertical-timeline-element--work"
               contentStyle={{ background: "#5F7ADB", color: "#fff" }}
               contentArrowStyle={{ borderRight: "7px solid  #5F7ADB" }}
-              date="2023.03.07. - "
+              date="2024.03.07. - "
               iconStyle={{ background: "#5F7ADB", color: "#fff" }}
               icon={<FaCode />}
             >
